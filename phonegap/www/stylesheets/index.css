@@ -1,0 +1,331 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+
+#centrar_cargando {
+    color: white;
+    text-align: center;
+    margin-top: 20%;
+    width: 70%;
+    margin: auto;
+}
+
+
+nav {
+    height: 3em;
+}
+
+
+#paginaCargando, #paginaInicio,  #paginaMenu, #paginaJuego, #paginaAcierto, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaFin, #paginaFinEstilo, #volverInicio, #pageInfo, #pageNoMas, #paginaAceptarArtista, #paginaFinRetoArtista, #paginaCaptura, #paginaLicencia {
+    background-image: url(../images/fondo.jpg);  
+    background-size: cover;
+    text-align: center;
+}
+
+.valign {
+    width: 100% !important;
+}
+
+.container {
+    text-align: center;
+}
+
+#menuInicio {
+    width: 100% !important;
+    margin-top: 3em !important;
+}
+
+.botones_inicio {
+    width: 100%;
+    text-align: center;
+    color: white !important;
+}
+
+#gracias {
+    font-size: 0.7em;
+}
+
+#contenedorEstilos, #contenedorBotonesEstilo, #menuEstilos{    
+    width: 100% !important;
+    text-align: center;    
+    margin-top: 3em !important;
+}
+
+#mensajeSeleccion {
+    margin: auto;
+}
+
+.botonEstilo {
+    width: 100% !important;
+    text-align: center;
+    color: white !important;
+    font-size: 0.7em !important;
+}
+
+.centrar{
+    margin: auto;
+}
+
+
+#divDeezer{
+    width: 85%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.55); 
+    font-size: 1.6em;
+    color: white;
+}
+
+#logoDeezer {
+    width: 90%;
+    margin: auto;
+}
+
+.laVida {
+    font-size: 0.7em;
+    text-align: left;
+    color: black;
+    padding-left: 1em;
+}
+
+.losPuntos {
+    font-size: 0.7em;
+    text-align: right;
+    color: black;
+    padding-right: 1em;
+}
+
+.divAdivina {
+    letter-spacing: 0.2em;
+    color: white;
+    background: rgba(255, 255, 255, 0.55); 
+    padding-top: 0.5em;
+}
+
+#containerAdivina, #containerAdivinaReto {
+    width: 100% !important;
+}
+
+.mensajeAdivina{
+    font-size: 0.7em !important;
+    line-height:10px;
+}
+
+#insertarAudio {
+    width: 90% !important;
+    margin: auto !important;
+}
+
+#adivina, #adivinaReto {
+    font-size: 1.3em !important;
+}
+
+#fondo, #fondoReto {
+    background-image: url(../images/6.png); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    height: 100%;
+}
+
+#bloque{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    /*position: fixed;*/
+}
+
+#mensajeAcierte {
+    color: white;
+}
+
+#tituloObjetivo {
+    font-size: large;
+    color: red;
+    margin-bottom: 5px;
+}
+
+
+#imagenesAhorcado {
+    text-align: center;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#imagen {
+    max-width: 100%;
+    height: auto;
+}
+
+.centrado{
+    text-align: center;
+}
+
+.izquierda{
+    text-align: left;
+}
+
+
+.botonLetra, .botonAyuda {
+    background-color: #e7e892 !important;
+    /*font-size: 1em !important;*/
+    padding: 0.3em !important;
+    color: white !important;
+    background: rgba(255, 255, 255, 0.25) !important;    
+}
+
+.botonHome {
+    background-color: #e7e892 !important;
+    /*font-size: 1em !important;*/
+    color: white !important;
+    background: rgba(255, 255, 255, 0.25) !important;    
+}
+
+
+
+.pulsada {
+    color: grey !important;
+    background: rgba(255, 255, 255, 0.45) !important;  
+}
+
+#campoBuscarCancion {
+    color: white;
+}
+
+#capturarPantalla, #divResultado, #divBusqueda, #finJuego, #contenedorEstiloFin, #resultadoLista, #centroVolver, #centroInfo, #centroNoMas, #divBuscarArtista, #datosRetoArtista, #datosFinRetoArtista, #resultadoBuscarArtista, #centroCaptura, #datosLicencia, #mensajeSeleccion, #capturarPantallaFinSimple, #capturarPantallaFinEstilo, #capturarPantallaFinArtista, #opcionRetarArtista{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.55); 
+    color: white;
+}
+
+
+#noticias {
+    font-size: 0.8em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+#logoNoticias{
+    width: 120%;
+}
+
+#resultadoLista, #resultadoBuscarArtista {
+    width: 100%;
+}
+
+.botonCancion {
+    width:90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.botonCanciones {    
+    background-color: #F2F2F2;
+}
+
+#cabeceraJuego, #cabaceraReta, #cabeceraEstilos {
+    font-size: large;
+}
+
+#mensajeSeleccion {
+    width: 90%;
+    text-align: center;
+}
+
+#labelCajon, #labelBuscarArtista{
+    color: black;
+}
+
+
+#cajonBuscarArtista, #cajonBusqueda {
+    color: black;
+}
+
+#cajonBuscarArtista::-webkit-input-placeholder {
+    color: white;
+}
+
+#cajonBusqueda::-webkit-input-placeholder {
+    color: white;
+}
+
+
+
+#botonBuscarCancion, #botonBuscarArtista ,#botonLimpiarCancion, #botonSiguiente, #botonRetar, #botonVolverSi, #botonVolverNo, #botonInfoSalir, #botonInfoSeguir, #botonInfoRetar, #botonNoMasSalir, #botonNoMasReiniciar, #botonFinEstilos, #botonFin {
+    color: white;
+}
+
+#botonAceptarRetoArtista, #botonSalirRetoArtista, #botonIrRetarArtista, #botonSalirFinRetoArtista {
+    color: white;
+}
+
+.letrasBlancas{
+    color: white;
+}
+
+#imagenAutor{
+    width: 100%;
+}
+
+#enlaceDeezer {
+    width: 100px;
+}
+
+#escucharCancion {
+    font-size: 0.7em;
+}
+
+.textoCapturaCanciones {
+    font-size: 1.2em;
+    color: black;
+}
+
+.textoCaptura {
+    font-size: 0.7em;
+}
+
+#cuadroCaptura, #cuadroCapturaFinSimple, #cuadroCapturaFinEstilo, #cuadroCapturaFinArtista {
+    margin-bottom: 0px;
+}
+
+#capturarPantalla{
+    height: 55px;
+}
+
+
+#botonDeezer {
+    color: black;
+    background: rgba(255, 255, 255, 0.85);
+    margin-bottom: 8px;
+    height: 55px;
+}
+
+#pubJuegoIndividual{
+    width: 95% !important;
+    text-align: center;
+    margin: auto;
+}
+
+#pubJuegoReto{
+    width: 95% !important;
+    text-align: center;
+    margin: auto;
+}
