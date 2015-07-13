@@ -3498,6 +3498,356 @@
         "type": "album"
       },
       "type": "track"
+    }, {
+      "id": "89649859",
+      "readable": true,
+      "title": "The Man Who Sold The World",
+      "link": "http://www.deezer.com/track/89649859",
+      "duration": "237",
+      "rank": "790587",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-8.deezer.com/stream/8f3e9e05cf2a13d58769a18cb53c0037-4.mp3",
+      "artist": {
+        "id": "997",
+        "name": "David Bowie",
+        "link": "http://www.deezer.com/artist/997",
+        "picture": "https://api.deezer.com/artist/997/image",
+        "tracklist": "https://api.deezer.com/artist/997/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "9078679",
+        "title": "Nothing Has Changed (The Best Of David Bowie)",
+        "cover": "https://api.deezer.com/album/9078679/image",
+        "tracklist": "https://api.deezer.com/album/9078679/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "2252935",
+      "readable": true,
+      "title": "Save Tonight",
+      "link": "http://www.deezer.com/track/2252935",
+      "duration": "243",
+      "rank": "964596",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-e.deezer.com/stream/ec8eae62d00a1a2e4b7aa38324fe643e-4.mp3",
+      "artist": {
+        "id": "1193",
+        "name": "Eagle-Eye Cherry",
+        "link": "http://www.deezer.com/artist/1193",
+        "picture": "https://api.deezer.com/artist/1193/image",
+        "tracklist": "https://api.deezer.com/artist/1193/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "224942",
+        "title": "Desireless",
+        "cover": "https://api.deezer.com/album/224942/image",
+        "tracklist": "https://api.deezer.com/album/224942/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "86209717",
+      "readable": true,
+      "title": "The Shoop Shoop Song",
+      "link": "http://www.deezer.com/track/86209717",
+      "duration": "168",
+      "rank": "330267",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-1.deezer.com/stream/1cc23504216b741deb07f5aa3e877f5a-0.mp3",
+      "artist": {
+        "id": "3156",
+        "name": "Cher",
+        "link": "http://www.deezer.com/artist/3156",
+        "picture": "https://api.deezer.com/artist/3156/image",
+        "tracklist": "https://api.deezer.com/artist/3156/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "8695973",
+        "title": "Los 100 Mayores Éxitos de los 80 Vol. 2",
+        "cover": "https://api.deezer.com/album/8695973/image",
+        "tracklist": "https://api.deezer.com/album/8695973/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "3142379",
+      "readable": true,
+      "title": "The Best",
+      "link": "http://www.deezer.com/track/3142379",
+      "duration": "329",
+      "rank": "924589",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-4.deezer.com/stream/484486362ca71d2c4cb8a113f9f600af-3.mp3",
+      "artist": {
+        "id": "1454",
+        "name": "Tina Turner",
+        "link": "http://www.deezer.com/artist/1454",
+        "picture": "https://api.deezer.com/artist/1454/image",
+        "tracklist": "https://api.deezer.com/artist/1454/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "302597",
+        "title": "Tina!",
+        "cover": "https://api.deezer.com/album/302597/image",
+        "tracklist": "https://api.deezer.com/album/302597/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "91753352",
+      "readable": true,
+      "title": "Maggie May",
+      "link": "http://www.deezer.com/track/91753352",
+      "duration": "345",
+      "rank": "501570",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-8.deezer.com/stream/882ca00792c6655b7d2285bb59a2f067-2.mp3",
+      "artist": {
+        "id": "196856",
+        "name": "Rod Steward",
+        "link": "http://www.deezer.com/artist/196856",
+        "picture": "https://api.deezer.com/artist/196856/image",
+        "tracklist": "https://api.deezer.com/artist/196856/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "9312906",
+        "title": "Sixties Best Of",
+        "cover": "https://api.deezer.com/album/9312906/image",
+        "tracklist": "https://api.deezer.com/album/9312906/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "580936",
+      "readable": true,
+      "title": "Say My Name",
+      "link": "http://www.deezer.com/track/580936",
+      "duration": "269",
+      "rank": "969010",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-e.deezer.com/stream/efcca9a7838c0bb4412699c0ebc07bc4-6.mp3",
+      "artist": {
+        "id": "595",
+        "name": "Destiny's Child",
+        "link": "http://www.deezer.com/artist/595",
+        "picture": "https://api.deezer.com/artist/595/image",
+        "tracklist": "https://api.deezer.com/artist/595/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "74843",
+        "title": "The Writing's On The Wall",
+        "cover": "https://api.deezer.com/album/74843/image",
+        "tracklist": "https://api.deezer.com/album/74843/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "1043894",
+      "readable": true,
+      "title": "Waterfalls",
+      "link": "http://www.deezer.com/track/1043894",
+      "duration": "276",
+      "rank": "892748",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-c.deezer.com/stream/ce7d9d65d47afee6d5b6f5f75ea8a964-3.mp3",
+      "artist": {
+        "id": "183",
+        "name": "TLC",
+        "link": "http://www.deezer.com/artist/183",
+        "picture": "https://api.deezer.com/artist/183/image",
+        "tracklist": "https://api.deezer.com/artist/183/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "113976",
+        "title": "Crazysexycool",
+        "cover": "https://api.deezer.com/album/113976/image",
+        "tracklist": "https://api.deezer.com/album/113976/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    }, {
+      "id": "1172330",
+      "readable": true,
+      "title": "(Everything I Do) I Do It For You",
+      "link": "http://www.deezer.com/track/1172330",
+      "duration": "394",
+      "rank": "959730",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-a.deezer.com/stream/a4df9a5c44588e03ffb0f58776c565bf-7.mp3",
+      "artist": {
+        "id": "170",
+        "name": "Bryan Adams",
+        "link": "http://www.deezer.com/artist/170",
+        "picture": "https://api.deezer.com/artist/170/image",
+        "tracklist": "https://api.deezer.com/artist/170/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "125467",
+        "title": "The Best Of Me",
+        "cover": "https://api.deezer.com/album/125467/image",
+        "tracklist": "https://api.deezer.com/album/125467/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "44586841",
+      "readable": true,
+      "title": "Sacrifice",
+      "link": "http://www.deezer.com/track/44586841",
+      "duration": "308",
+      "rank": "911243",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-9.deezer.com/stream/930f37a61a93d64888c643f0824440f5-4.mp3",
+      "artist": {
+        "id": "413",
+        "name": "Elton John",
+        "link": "http://www.deezer.com/artist/413",
+        "picture": "https://api.deezer.com/artist/413/image",
+        "tracklist": "https://api.deezer.com/artist/413/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "4397541",
+        "title": "Love Songs",
+        "cover": "https://api.deezer.com/album/4397541/image",
+        "tracklist": "https://api.deezer.com/album/4397541/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "2133626",
+      "readable": true,
+      "title": "I Say A Little Prayer",
+      "link": "http://www.deezer.com/track/2133626",
+      "duration": "217",
+      "rank": "943020",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-8.deezer.com/stream/8adac534066a865c0823e0839c711974-5.mp3",
+      "artist": {
+        "id": "2059",
+        "name": "Aretha Franklin",
+        "link": "http://www.deezer.com/artist/2059",
+        "picture": "https://api.deezer.com/artist/2059/image",
+        "tracklist": "https://api.deezer.com/artist/2059/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "213969",
+        "title": "Soul Queen",
+        "cover": "https://api.deezer.com/album/213969/image",
+        "tracklist": "https://api.deezer.com/album/213969/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "11630127",
+      "readable": true,
+      "title": "Brown Eyed Girl",
+      "link": "http://www.deezer.com/track/11630127",
+      "duration": "185",
+      "rank": "830055",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-1.deezer.com/stream/1a993c12ee4d90356640520a06aaf9d4-4.mp3",
+      "artist": {
+        "id": "2798",
+        "name": "Van Morrison",
+        "link": "http://www.deezer.com/artist/2798",
+        "picture": "https://api.deezer.com/artist/2798/image",
+        "tracklist": "https://api.deezer.com/artist/2798/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "1064742",
+        "title": "The Bang Sessions",
+        "cover": "https://api.deezer.com/album/1064742/image",
+        "tracklist": "https://api.deezer.com/album/1064742/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "15929656",
+      "readable": true,
+      "title": "Hit the Road Jack",
+      "link": "http://www.deezer.com/track/15929656",
+      "duration": "120",
+      "rank": "962982",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-b.deezer.com/stream/b1a177862ccbda6a60310a9e9f8bfe21-3.mp3",
+      "artist": {
+        "id": "1342",
+        "name": "Ray Charles",
+        "link": "http://www.deezer.com/artist/1342",
+        "picture": "https://api.deezer.com/artist/1342/image",
+        "tracklist": "https://api.deezer.com/artist/1342/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "1476061",
+        "title": "Hit the Road Jack !",
+        "cover": "https://api.deezer.com/album/1476061/image",
+        "tracklist": "https://api.deezer.com/album/1476061/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "909811",
+      "readable": true,
+      "title": "Ain't No Mountain High Enough",
+      "link": "http://www.deezer.com/track/909811",
+      "duration": "146",
+      "rank": "906320",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-3.deezer.com/stream/330064f6e9686ad55bb9156ae96c9510-7.mp3",
+      "artist": {
+        "id": "1154",
+        "name": "Marvin Gaye",
+        "link": "http://www.deezer.com/artist/1154",
+        "picture": "https://api.deezer.com/artist/1154/image",
+        "tracklist": "https://api.deezer.com/artist/1154/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "102595",
+        "title": "Soul Legends",
+        "cover": "https://api.deezer.com/album/102595/image",
+        "tracklist": "https://api.deezer.com/album/102595/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },{
+      "id": "908572",
+      "readable": true,
+      "title": "Feeling Good",
+      "link": "http://www.deezer.com/track/908572",
+      "duration": "173",
+      "rank": "975274",
+      "explicit_lyrics": false,
+      "preview": "http://cdn-preview-5.deezer.com/stream/551d3b96407ea85fd8e193e9c96fd073-4.mp3",
+      "artist": {
+        "id": "744",
+        "name": "Nina Simone",
+        "link": "http://www.deezer.com/artist/744",
+        "picture": "https://api.deezer.com/artist/744/image",
+        "tracklist": "https://api.deezer.com/artist/744/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "102539",
+        "title": "The Very Best Of Smooth Jazz",
+        "cover": "https://api.deezer.com/album/102539/image",
+        "tracklist": "https://api.deezer.com/album/102539/tracks",
+        "type": "album"
+      },
+      "type": "track"
     }
               
   ]}

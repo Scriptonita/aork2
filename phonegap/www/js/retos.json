@@ -1,0 +1,117 @@
+{
+    "data" : [
+        {
+            "id": "182",
+            "artista": "Red Hot Chili Peppers",
+            "propone": "Gracias a Jesús"   
+        },
+        {
+            "id": "215272",
+            "artista": "Vanesa Martín",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "75249",
+            "artista": "Ketama",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "180",
+            "artista": "ABBA",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "12068",
+            "artista": "Los Delinqüentes",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>" 
+        },
+        {
+            "id": "243530",
+            "artista": "Elefantes",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>" 
+        },
+        
+        {
+            "id": "2697",
+            "artista": "Melendi",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>" 
+        },
+        {
+            "id": "12890",
+            "artista": "Malú",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "4399",
+            "artista": "Los Rodríguez",
+            "propone": "Gracias a María" 
+        },
+        {
+            "id": "6623",
+            "artista": "Chambao",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>" 
+        },
+        
+    	{
+    		"id": "9148",
+    		"artista": "Marea",
+    		"propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>" 
+    	},
+        {
+            "id": "243508",
+            "artista": "El Arrebato",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "65671",
+            "artista": "Martires del Compás",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "712271",
+            "artista": "Pablo Alboran",
+            "propone": "Gracias a María"   
+        },
+        {
+            "id": "4471",
+            "artista": "El Barrio",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "307450",
+            "artista": "Fito & Fitipaldis",
+            "propone": "Gracias a Anselmo"   
+        },
+        {
+            "id": "6137",
+            "artista": "Héroes del Silencio",
+            "propone": "Gracias a Liliana"
+        },
+        {
+            "id": "8341",
+            "artista": "Triana",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "12142",
+            "artista": "Antoinio Orozco",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "13631",
+            "artista": "Manolo García",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        },
+        {
+            "id": "8548",
+            "artista": "Hombres G",
+            "propone": "Gracias a <span class='proponeReto' onclick='window.open(\"http://twitter.com/androidsis\", \"_blank\");'>@androidsis</span>"   
+        },
+        {
+            "id": "65354",
+            "artista": "M-Clan",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"   
+        }
+    ]
+}
+

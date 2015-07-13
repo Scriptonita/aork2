@@ -11,9 +11,9 @@ function traducir ($idioma) {
 			$("#mensajeCargando").html("Loading");
 
 			// Página de inicio // Home Page
-			$("#botonInicioJugar").html("Play");
-			$("#botonInicioArtista").html("Artists Game");
-			$("#botonInicioEstilos").html("Styles game");
+			$("#InicioSolitario").html("Single");
+			$("#InicioArtista").html("Artists");
+			$("#InicioEstilos").html("Styles");
 			$("#botonInicioCrear").html("Challenge a friend");
 			$("#gracias").html("Thanks to");
 
@@ -70,6 +70,7 @@ function traducir ($idioma) {
 
 			// Página Crear Ahorcado
 			$("#cabeceraCrearReto").html("Challenge a friend");
+			$("#cajonBusqueda").attr("placeholder", "Touch and type the name");
 			$("#retoMensaje").html("Search, choose a song and challenge a friend to know if he knows it.<br /><br /> Your friend don't need the app to play, they can play in mobile browser.");
 			$("#retoGanasPuntos").html("You win 20 points!!");
 			$("#labelCajon").html("title, artist...");
@@ -126,12 +127,13 @@ function traducir ($idioma) {
 			// Página Artista
 
 			$("#cabeceraBuscarArtista").html("Search for a singer or group");
+			$("#cajonBuscarArtista").attr("placeholder", "Touch and type the name")
 			$("#MensajeBuscarArtista").html("Play with the songs of a singer of your choice");
 			$("#labelBuscarArtista").html("Singer, group...");
 			$("#botonBuscarArtista").html("Search");
 			$("#botonLimpiarBuscarArtista").html("Clean");
 			$("#retoBuscarArtista").html("Get 35 points sharing the challenge with friends.<br /><br /> Your friend don't need the app to play, they can play in mobile browser.");
-
+			$("#retarArtistaText").html("Send challenge");
 			// Página Aceptar Reto Artista
 
 			$("#spanRetoArtista").html("You have been challenged to play hangman with ");

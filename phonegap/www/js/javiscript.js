@@ -4,6 +4,12 @@ function centrarVerticalmente (div1, div2) {
     $(div2).addClass("valign");
 }
 
+function centrarVerticalmenteInicio (div1, div2) {
+    $(div1).css({"height": $(window).height() - 50});
+    $(div1).addClass("valign-wrapper");
+    $(div2).addClass("valign");
+}
+
 function centrarVerticalmenteConCabecera (div1, div2, cabecera) {
     $(div1).css({"height": $(window).height() - $(cabecera).height()});
     $(div1).addClass("valign-wrapper");
@@ -28,6 +34,34 @@ function abrirEnlaceExterno (urlExt) {
     }
 }
 
+function preparaRetoDiario () {
+    $("#imgRetoDiario").attr('src', 'images/cargando.gif');
+    $idRD = $retosDiarios.data[$indiceRD].id; //id del artista del reto diario
+    $("#imgRetoDiario").css("background-image", 'url(https://api.deezer.com/artist/' + $idRD + '/image)');
+    $("#imgRetoDiario").css("background-size", 'contain');
+    $("#retoPortadaAutor").html($retosDiarios.data[$indiceRD].artista);
+    $("#retoPortadaComentario").html($retosDiarios.data[$indiceRD].propone);
+    $("#imgRetoDiario").attr("src", "images/play2.png");
+}
+
+function obtenerRetosDiarios () {
+    $.getJSON( "http://aork2.com/js/retos.json", function(){} )
+        .done(function( json ) {
+            $retosDiarios = json;
+            $indiceRD = 0;
+            $("#imgRetoDiario").attr("src", "images/play2.png");
+            preparaRetoDiario ();
+        })
+        .fail(function( jqxhr, textStatus, error ) {
+            var err = textStatus + ", " + error;
+            alert( "Request Failed: " + err );
+        });
+    $("#retoAnterior").addClass("noHayMas");
+}
+
+
+
+
 $(document).on('pageinit', function () {
     //$.mobile.ajaxEnabled = false;
 
@@ -36,89 +70,141 @@ $(document).on('pageinit', function () {
 
     $("#botonInicioJugar").click(function(event){
         event.stopImmediatePropagation();
-        $tracks = {};
-        $.getJSON( "js/tracks.json", function(){} )
-            .done(function( json ) {
-                $tracks = json;
-                //$tracks = $tracksInd;
-                $tipoJuego = "1";
-                $esReto = false;
-                //$indice = 0;
-                $puntos = parseInt(window.localStorage.getItem("puntos"));
-                if (!$puntos) {
-                    $puntos = 0;
-                }
-                $("#miVida").html($vida);
-                $("#misPuntos").html($puntos);
-                $indice = parseInt(window.localStorage.getItem("indice"));
-                if (!$indice) {
-                    $indice = 0;
-                }
-                // Para prevenir algún error que haga que el índice sea mayor que el número de canciones
-                // lo que provocaría un error en $titulo = $track.title que detendría el juego.
-                // Redirigimos a PageNoMas. En caso distinto seguimos con el juego.
-                if ($indice >= $tracks.data.length) {
-                    $("#noMasJuegosGanados").html($aciertos + "/" + $indice);
-                    $("#noMasPuntos").html("Total de puntos.");
-                    centrarVerticalmente("#divNoMas", "#centrarNoMas");
-                    $.mobile.changePage("#pageNoMas",{transition: "flip"});
-                } else {
-                    $aciertos = parseInt(window.localStorage.getItem("aciertos"));
-                    if (!$aciertos) {
-                        $aciertos = 0;
-                    }
-                    iniciarJuego();
-                    centrarVerticalmente("#divJuego","#bloqueJuego");
-                    $.mobile.changePage("#paginaJuego",{});
-                    setTimeout("prepararPaginaAcierto()",3000);
-                }
+        if (!$enTour) {
+          $tracks = {};
+          $.getJSON( "http://aork2.com/js/tracks.json", function(){} )
+              .done(function( json ) {
+                  $tracks = json;
+                  //$tracks = $tracksInd;
+                  $tipoJuego = "1";
+                  $esReto = false;
+                  //$indice = 0;
+                  $puntos = parseInt(window.localStorage.getItem("puntos"));
+                  if (!$puntos) {
+                      $puntos = 0;
+                  }
+                  $("#miVida").html($vida);
+                  $("#misPuntos").html($puntos);
+                  $indice = parseInt(window.localStorage.getItem("indice"));
+                  if (!$indice) {
+                      $indice = 0;
+                  }
+                  // Para prevenir algún error que haga que el índice sea mayor que el número de canciones
+                  // lo que provocaría un error en $titulo = $track.title que detendría el juego.
+                  // Redirigimos a PageNoMas. En caso distinto seguimos con el juego.
+                  if ($indice >= $tracks.data.length) {
+                      $("#noMasJuegosGanados").html($aciertos + "/" + $indice);
+                      $("#noMasPuntos").html("Total de puntos.");
+                      centrarVerticalmente("#divNoMas", "#centrarNoMas");
+                      $.mobile.changePage("#pageNoMas",{transition: "flip"});
+                  } else {
+                      $aciertos = parseInt(window.localStorage.getItem("aciertos"));
+                      if (!$aciertos) {
+                          $aciertos = 0;
+                      }
+                      iniciarJuego();
+                      centrarVerticalmente("#divJuego","#bloqueJuego");
+                      $.mobile.changePage("#paginaJuego",{});
+                      setTimeout("prepararPaginaAcierto()",3000);
+                  }
 
-            })
-            .fail(function( jqxhr, textStatus, error ) {
-                var err = textStatus + ", " + error;
-                alert( "Request Failed: " + err );
-                $.mobile.changePage("#paginaInicio",{});
+              })
+              .fail(function( jqxhr, textStatus, error ) {
+                  var err = textStatus + ", " + error;
+                  alert( "Request Failed: " + err );
+                  $.mobile.changePage("#paginaInicio",{});
 
-        });
-        window.analytics.trackView('Hacia Juego Individual')
-        $.mobile.changePage("#paginaCargando",{});
+          });
+          window.analytics.trackView('Hacia Juego Individual');
+          $.mobile.changePage("#paginaCargando",{});
+        }
     });
 
     $("#botonInicioArtista").click(function(event){
         event.stopImmediatePropagation();
-        $tipoJuego = "3";
-        $("#compartirBuscarArtista").hide();
-        $("#divResultadoBuscarArtista").hide();
-        $("#divBuscarArtista").show();
-        window.analytics.trackView('Pantalla Buscar Artista');
-        $.mobile.changePage("#paginaBuscarArtista",{});
+        if (!$enTour) {
+          $tipoJuego = "3";
+          $("#compartirBuscarArtista").hide();
+          $("#divResultadoBuscarArtista").hide();
+          $("#divBuscarArtista").show();
+          window.analytics.trackView('Pantalla Buscar Artista');
+          $.mobile.changePage("#paginaBuscarArtista",{});
+        }
     });
 
     $("#botonInicioEstilos").click(function(event){
         event.stopImmediatePropagation();
-        $esReto = false;
-        centrarVerticalmenteConCabecera("#divEstilos","#contenedorEstilos","#cabeceraEstilos");
-        window.analytics.trackView('Pantalla Estilos');
-        $.mobile.changePage("#paginaEstilos",{});
+        if (!$enTour) {
+          $esReto = false;
+          centrarVerticalmenteConCabecera("#divEstilos","#contenedorEstilos","#cabeceraEstilos");
+          window.analytics.trackView('Pantalla Estilos');
+          $.mobile.changePage("#paginaEstilos",{});
+        }
     });
 
     $("#botonInicioCrear").click(function(event){
         event.stopImmediatePropagation();
-        $tipoJuego = "2";
-        $("#compartir").hide();
-        $("#resultadoBusqueda").hide();
-        $("#divBusqueda").show();
-        window.analytics.trackView('Pantalla Retar');
-        $.mobile.changePage("#paginaCrear",{});
+        if (!$enTour) {
+          $tipoJuego = "2";
+          $("#compartir").hide();
+          $("#resultadoBusqueda").hide();
+          $("#divBusqueda").show();
+          $("#explicacionCrear").show();
+          $("#botonBuscarCancion").show();
+          
+          window.analytics.trackView('Pantalla Retar');
+          $.mobile.changePage("#paginaCrear",{});
+        }
     });
 
+    $("#imgRetoDiario").click(function(event){
+        event.stopImmediatePropagation();
+        if (!$enTour) {
+            $tipoJuego = "3";
+            $idTrackReto = 0;
+            $idArtistaReto = $idRD;
+            comprobarReto();
+        }
+    });
+
+    $("#retoAnterior").click(function(event){
+        event.stopImmediatePropagation();
+        if (!$enTour) {
+            if ($indiceRD > 0) {
+                $("#retoAnterior").removeClass("noHayMas");
+                $indiceRD--;
+                preparaRetoDiario ();
+            }
+            if ($indiceRD == 0) {
+                $("#retoAnterior").addClass("noHayMas");
+            }
+            $("#retoPosterior").removeClass("noHayMas");
+        }
+    });
+
+    $("#retoPosterior").click(function(event){
+        event.stopImmediatePropagation();
+        if (!$enTour) {
+            if ($indiceRD < $retosDiarios.data.length-1) {
+                $("#retoPosterior").removeClass("noHayMas");
+                $indiceRD++;
+                preparaRetoDiario ();
+            }
+            if ($indiceRD == $retosDiarios.data.length-1) {
+                $("#retoPosterior").addClass("noHayMas");
+            }
+            $("#retoAnterior").removeClass("noHayMas");
+        }
+    });
+
+    /*
     $("#imgCC").click(function(event){
         event.stopImmediatePropagation();
         centrarVerticalmente("#divLicencia", "#bloqueLicencia");
         window.analytics.trackView('Pantalla Licencia');
         $.mobile.changePage("#paginaLicencia",{});
     });
-
+    */
     // =========================================================================================================
     // =========================================================================================================
 
@@ -226,13 +312,14 @@ $(document).on('pageinit', function () {
 
     $(".botonLetra").click(function(event){
         event.stopImmediatePropagation();
-        var letra = $(this).html();
-        console.log ("Has pulsado: " + letra);
-        if (!$(this).hasClass("pulsada")) {
-            $(this).addClass("pulsada");
-            comprobarLetra(letra);
+        if (!$enTour) {
+          var letra = $(this).html();
+          console.log ("Has pulsado: " + letra);
+          if (!$(this).hasClass("pulsada")) {
+              $(this).addClass("pulsada");
+              comprobarLetra(letra);
+          }
         }
-        //$(this).hide();
     });
 
     // Página estilos
@@ -273,7 +360,8 @@ $(document).on('pageinit', function () {
                 $indice++;
                 var resto = $indice % 10;
                 if (resto == 0) {
-                    admob.showInterstitialAd();
+                    //AdMob.showInterstitialAd();
+                    AdMob.showInterstitial();
                 }
                 iniciarJuego();
                 $.mobile.changePage("#paginaJuego",{});
@@ -300,7 +388,8 @@ $(document).on('pageinit', function () {
                 $puntos = total;
                 window.localStorage.setItem("puntos", $puntos);
                 centrarVerticalmenteConCabecera ("#estiloResultado", "#estiloResultadoCentrar", "#cabeceraFinEstilo");
-                admob.showInterstitialAd();
+                //AdMob.showInterstitialAd();
+                AdMob.showInterstitial();
                 window.analytics.trackView('Pantalla Fín Estilo ' + $estilo);
                 $.mobile.changePage("#paginaFinEstilo",{});
             }
@@ -325,11 +414,17 @@ $(document).on('pageinit', function () {
                 window.localStorage.setItem("puntos", $puntos);
                 $("#imagenFinRetoArtista").html("<a href='" + $deezerArtista + "'><img src='" + $imagenArtista + "' alt='imagen artista' /></a>");
                 centrarVerticalmente("#divFinRetoArtista", "#bloqueFinRetoArtista");
-                admob.showInterstitialAd();
+                //AdMob.showInterstitialAd();
+                AdMob.showInterstitial();
                 window.analytics.trackView('Pantalla Fín Artista');
                 $.mobile.changePage("#paginaFinRetoArtista",{});
             }
         }
+    });
+
+    $("#cuadroAndroid").click(function(event){
+        event.stopImmediatePropagation();
+        abrirEnlaceExterno ('https://play.google.com/store/apps/details?id=com.aork2.app');
     });
 
     // Página Acierto Reto
@@ -376,6 +471,11 @@ $(document).on('pageinit', function () {
         $("#divResultadoBuscarArtista").hide();
         $("#divBuscarArtista").show();
         $.mobile.changePage("#paginaBuscarArtista",{});
+    });
+
+    $("#escucharListaArtista").click(function(event){
+        event.stopImmediatePropagation();
+        abrirEnlaceExterno ('http://www.deezer.com/artist/' + $idArtistaReto + '?app_id=158051');
     });
 
     $("#botonSalirFinRetoArtista").click(function(event){

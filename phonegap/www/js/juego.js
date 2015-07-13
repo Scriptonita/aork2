@@ -30,7 +30,7 @@ function obtenerCancion(json, indice){
 function iniciarJuego() {
     $(".botonLetra").removeClass("pulsada");
     $("#fondo").css("background-image", 'url(images/6.png)');
-    
+
     $track = $tracks.data[$indice];
     $ancho = $(window).width();
     $("#imagen").attr("width", $ancho);
@@ -39,7 +39,7 @@ function iniciarJuego() {
     $titulo = $titulo.toUpperCase();
     $puntos = parseInt(window.localStorage.getItem("puntos"));
     $("#misPuntos").html($puntos);
-    
+
     $("#insertarAudio").html(' \
                              <audio controls> \
                                 <source src=" ' + $track.preview +  ' " type="audio/mpeg"> \
@@ -49,9 +49,9 @@ function iniciarJuego() {
     $("#miVida").html($vida);
     $("#infoPuntos").html($puntos);   // Puntuación en página de información durante el juego PageInfo
     $("#noMasPuntos").html($puntos);  // Puntuación en página de información PageNoMas
-    
+
     $aux = "";
-    for (var x=0; x < $titulo.length; x++) {       
+    for (var x=0; x < $titulo.length; x++) {
         if(/[A-Z]/.test($titulo.charAt(x))){
             $aux = $aux + "_";
         } else {
@@ -59,6 +59,11 @@ function iniciarJuego() {
         }
     }
     $("#adivina").html($aux);
+    $hacerTourJuego = localStorage.getItem("tourJuego");
+    if (!$hacerTourJuego) {
+        tourJuego();
+        localStorage.setItem("tourJuego", true);
+    }
 };
 
 // Comprueba en cada pulsación de letra si se encuentra en el título o no y actúa en consecuencia
@@ -68,7 +73,7 @@ function comprobarLetra (letra) {
         if ($titulo[x] == letra) {
             var temp = "";
             for (var y=0; y<x; y++) {
-               temp = temp + $aux[y]; 
+               temp = temp + $aux[y];
             }
             temp = temp + letra;
             for (var y=x+1; y < $titulo.length; y++) {
@@ -84,7 +89,7 @@ function comprobarLetra (letra) {
         $("#adivinaReto").html($aux)
         //console.log ("Letra mostrada en su posición");
         if ($titulo == $aux) {
-            $aciertos++; 
+            $aciertos++;
             $("#resultado").html($enhorabuena);
             var aux = $puntos + 10 + $vida
             $("#marcador").html($idiomaPuntos + ": " + $puntos + " + 10 + " + $vida + " = " + aux);
@@ -96,7 +101,7 @@ function comprobarLetra (letra) {
             }
             */
             window.localStorage.setItem("puntos", $puntos);
-            haciaPaginaAcierto();            
+            haciaPaginaAcierto();
         }
     } else {
         $vida--;
@@ -105,7 +110,7 @@ function comprobarLetra (letra) {
         $("#fondo").css("background-image", 'url(images/' + $vida + '.png)');
         $("#miVidaReto").html($vida);
         $("#fondoReto").css("background-image", 'url(images/' + $vida + '.png)');
-        if ($vida == 0) {            
+        if ($vida == 0) {
             $("#resultado").html($hasFallado);
             var aux = $puntos - 5;
             $("#marcador").html($idiomaPuntos + ": " + $puntos + " - 5 = " + aux);
@@ -116,7 +121,7 @@ function comprobarLetra (letra) {
             window.localStorage.setItem("puntos", $puntos);
             haciaPaginaAcierto();
         }
-    }  
+    }
     //console.log ("Título: " + $titulo);
     //console.log ("$aux: " + $aux);
     //console.log ("vida: " + $vida);
@@ -127,48 +132,48 @@ function comprobarLetra (letra) {
 function prepararPaginaAcierto() {
     $("#pubJuegoIndividual").empty();
     $("#imagenesAhorcado").html('<img id="imagen" src="images/' + $vida + '.png" />');
-    $("#tituloObjetivo").html($titulo);    
+    $("#tituloObjetivo").html($titulo);
     $("#enlaceDeezer").attr("onclick", 'abrirEnlaceExterno("' + $track.link + '")');
     if ($tipoJuego != "3") {
         $("#imagenAutor").html("<img src='" + $track.artist.picture + "' />");
     }
     $("#autor").html($track.artist.name);
-    $("#album").html($track.album.title);     
+    $("#album").html($track.album.title);
 }
 
 // Guarda las puntuaciones e indices en su caso, antes de dirigir hacia la pagina de acierto
 function haciaPaginaAcierto() {
     $vida = 6;
-    $("#insertarAudio").html(''); 
-    if ($esReto) {        
+    $("#insertarAudio").html('');
+    if ($esReto) {
         $("#vecesRetos").html($nReto);
         $("#aciertoRetos").html($aciertosReto);
-        window.localStorage.setItem("aciertosReto", $aciertosReto); 
+        window.localStorage.setItem("aciertosReto", $aciertosReto);
         $("#botonSiguiente").hide();
         $("#botonRetar").show();
     } else if ($tipoJuego == "1") {
-        window.localStorage.setItem("indice", $indice+1); 
+        window.localStorage.setItem("indice", $indice+1);
         console.log("indice juego individual:" + $indice);
-        window.localStorage.setItem("aciertos", $aciertos); 
+        window.localStorage.setItem("aciertos", $aciertos);
         $("#botonRetar").hide();
         $("#botonSiguiente").show();
     } else if ($tipoJuego == "3") {;
         $("#botonRetar").hide();
         $("#botonSiguiente").show();
         console.log("Canciones acertadas del reto: " + $aciertosReto);
-    } 
-    $.mobile.changePage("#paginaAcierto",{transition: "flip"});                              
+    }
+    $.mobile.changePage("#paginaAcierto",{transition: "flip"});
 }
 
-// Prepara la página de juego en el modo estilos 
+// Prepara la página de juego en el modo estilos
 function iniciarJuegoEstilo () {
-    $(".botonLetra").removeClass("pulsada");   
-    $vida = 6;  
+    $(".botonLetra").removeClass("pulsada");
+    $vida = 6;
     $("#miVida").html($vida);
     $puntos = parseInt(window.localStorage.getItem("puntos"));
     $("#misPuntos").html($puntos);
     $("#infoPuntos").html($puntos);   // Puntuación en página de información durante el juego PageInfo
-    $("#noMasPuntos").html($puntos);  // Puntuación en página de información PageNoMas 
+    $("#noMasPuntos").html($puntos);  // Puntuación en página de información PageNoMas
 
     $("#fondo").css("background-image", 'url(images/6.png)');
     $track = $tracksEstilo[$indiceEstilo];
@@ -180,7 +185,7 @@ function iniciarJuegoEstilo () {
                              <audio controls> \
                                 <source src=" ' + $track.preview +  ' " type="audio/mpeg" id="audio"> \
                                 Your browser does not support the audio element. \
-                            </audio> '        
+                            </audio> '
     );
     $aux = "";
     for (var x=0; x < $titulo.length; x++) {
@@ -192,4 +197,3 @@ function iniciarJuegoEstilo () {
     }
     $("#adivina").html($aux);
 }
-

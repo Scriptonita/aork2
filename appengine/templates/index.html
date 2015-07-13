@@ -7,12 +7,14 @@
     Frameworks / Plugins /Librerías / API usadas:
     - PhoneGap              http://www.phonegap.com
         * Social Sharing    https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
+        * Custom URL Scheme https://github.com/EddyVerbruggen/Custom-URL-scheme
         * ScreenShot        https://github.com/gitawego/cordova-screenshot
-        * WebIntents        https://github.com/Initsogar/cordova-webintent
+        * Google Analytics  https://github.com/danwilson/google-analytics-plugin
     - Brackets              http://brackets.io/
     - Jquery                http://jquery.com/
     - Jquery mobile         http://jquerymobile.com/
     - Materialize           http://materializecss.com/
+    - Webtour               https://github.com/yckart/jquery.tour.js
     - Iconos                http://www.gieson.com/Library/projects/utilities/icon_slayer/
     - Deezer                http://developers.deezer.com/
     - Stackoverflow         http://stackoverflow.com/
@@ -45,6 +47,7 @@
         <link rel="stylesheet" type="text/css" href="/stylesheets/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="/stylesheets/materialize.min.css" />
         <link rel="stylesheet" type="text/css" href="/stylesheets/index.css" />
+        <link rel="stylesheet" type="text/css" href="/stylesheets/webtour.css" />
 
         <!--  Insertamos la llamada a la API de Deezer -->
         <script type="text/javascript" src="/js/dz.js"></script>
@@ -56,10 +59,14 @@
         <script type="text/javascript" src="/js/buscarArtista.js"></script>
         <script type="text/javascript" src="/js/buscarCancion.js"></script>
         <script type="text/javascript" src="/js/idiomas.js"></script>
+        <script type="text/javascript" src="/js/tours.js"></script>
+
+        <!-- Script de Webtour -->
+        <script type="text/javascript" src='/js/jquery.tour.js'></script>
 
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
-        <script type="text/javascript">stLight.options({publisher: "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXX", shorten:true, doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
+        <script type="text/javascript">stLight.options({publisher: "AAAAAAAA-BBBBB-CCCC-DDDD-EEEEEEEEEEE", shorten:true, doNotHash: true, doNotCopy: true, hashAddressBar: false});</script>
     </head>
     <body onload="comprobarReto()">
 
@@ -92,33 +99,75 @@
         Página de inicio de la aplicación
 
     ################################################################################################################################################## -->
+
         <div data-role="page" id="paginaInicio">
             <div id="divInicio">
                 <div id="menuInicio">
                     <div class="container">
-                        <div class="row">
-                            <a id="botonInicioJugar" class="btn-large waves-effect waves-light orange botones_inicio">Jugar</a>
-                            <br />
-                            <a id="botonInicioArtista" class="btn-large waves-effect waves-light orange botones_inicio">Jugar por artista</a>
-                            <br />
-                            <a id="botonInicioEstilos" class="btn-large waves-effect waves-light orange botones_inicio">Jugar por estilos</a>
-                            <br />
-                            <a id="botonInicioCrear" class="btn-large waves-effect waves-light orange botones_inicio">Retar a un amigo</a>
-                            <br />
-                            <div id ="divDeezer" class="ui-body ui-body-a ui-corner-all">
-                                <span id="gracias">Gracias a</span>
-                                <a href="http://www.deezer.com"><img id="logoDeezer" src="/images/deezer.jpeg" alt="Logo Deezer" /></a>
-                            </div>
-                            <br />
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col s4"><a href="http://www.facebook.com/aork2"><img src="/images/facebook.png" alt="facebook"></a></div>
-                                    <div class="col s4"><img id="imgCC" alt="Licencia de Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></div>
-                                    <div class="col s4"><a href="http://twitter.com/_aork2_"><img src="/images/twitter.png" alt="twitter"></a></div>
+                        <!-- <div class="row"> -->
+                            <div class="row">
+                                <!-- <p id="modosJuego">Modos de juego</p>-->
+                                <div class="col s4">
+                                    <span id="InicioSolitario" class="textInicio">Solitario</span><br />
+                                    <a id="botonInicioJugar" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-image-timer-auto large"></i></a>
+                                </div>
+                                <div class="col s4">
+                                    <span id="InicioArtista" class="textInicio">Artista</span><br />
+                                    <a id="botonInicioArtista" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-action-stars large"></i></a>
+                                </div>
+                                <div class="col s4">
+                                    <span id="InicioEstilos" class="textInicio">Estilos</span><br />
+                                    <a id="botonInicioEstilos" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-action-assessment large"></i></a>
                                 </div>
                             </div>
-                        </div>
+                            <a id="botonInicioCrear" class="waves-effect waves-light btn-large orange botones_inicio_2">Reta a un amigo<i class="mdi-social-share right"></i></a>
                     </div>
+                            <br />
+                            <div id="retosAork2" >
+                                    <div class="container cyan accent-4 z-depth-4">
+                                        <br />
+                                        <h6>Reto diario #retoAork2</h6>
+                                        <div id="bloqueRetoDiario" class="row">
+                                            <div class="col s1">
+                                                <i id="retoPosterior" class="mdi-hardware-keyboard-arrow-left"></i>
+                                            </div>
+                                            <div class="col s3">
+                                                <img id="imgRetoDiario" src="" alt="" class="circle responsive-img" />
+                                            </div>
+                                            <div class="col s7 izquierda">
+                                                <p class="izquierda">
+                                                    <span id="retoPortadaAutor">Artista</span><br />
+                                                    <span id="retoPortadaComentario">Gracias a</span>
+                                                </p>
+                                            </div>
+                                            <div class="col s1">
+                                                <i id="retoAnterior" class="mdi-hardware-keyboard-arrow-right"></i>
+                                            </div>
+
+                                        </div>
+                                        <br />
+                                    </div>
+                            </div>
+                            <br /><br />
+                            <div id="bloqueBase" class="row">
+                                <div class="col s6">
+                                    <div id ="divDeezer" class="ui-body ui-body-a ui-corner-all">
+                                        <span id="gracias">Gracias a</span>
+                                        <img onClick="abrirEnlaceExterno('http://www.deezer.com/?app_id=158051')" id="logoDeezer" src="/images/deezer.jpeg" alt="Logo Deezer" />
+                                    </div>
+                                </div>
+                                <div id="bloqueRedesSociales" class="col s6">
+                                        <div id="iconosRedes" class="row">
+                                            <div class="col s6">
+                                                <img onClick="abrirEnlaceExterno('http://twitter.com/_aork2_')" id="aork2-twitter" src="/images/twitter_80.jpg" alt="twitter" class="circle responsive-img z-depth-4" />
+                                            </div>
+                                            <div class="col s6">
+                                                <img onClick="abrirEnlaceExterno('http://www.facebook.com/aork2')" id="aork2-facebook" src="/images/facebook_80.jpg" alt="facebook" class="circle responsive-img z-depth-4" />
+
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
                 </div>
             </div>
         </div>
@@ -130,11 +179,9 @@
 
     ################################################################################################################################################## -->
         <div data-role="page" id="paginaEstilos">
-            <nav id="cabeceraEstilos" class="blue darken-4" role="navigation">
-                <div class="container">
-                    <span id="mensajeCabeceraEstilos">Estilos musicales</span>
-                    <a data-iconpos="notext" class="ui-btn-right"><img src="/images/home.png" class="botonHomeCabecera" /></a>
-                </div>
+            <nav id="cabeceraEstilos" class="blue darken-4">
+                <span id="mensajeCabeceraEstilos">Estilos musicales</span>
+                <a data-iconpos="notext" class="ui-btn-right"><img src="/images/home.png" class="botonHomeCabecera" /></a>
             </nav>
             <div id="divEstilos">
                 <div id="contenedorEstilos">
@@ -190,10 +237,10 @@
                                 <div class="divAdivina">
                                     <div class="ui-grid-a">
                                         <div class="ui-block-a laVida">
-                                            <span class="vida">Vida: </span><span id="miVida"></span>
+                                            <div id="bloqueVida"><span id="indicadorVida"><span class="vida">Vida: </span><span id="miVida"></span></span></div>
                                         </div>
                                         <div class="ui-block-b losPuntos">
-                                            <span class="puntuacion">Puntos: </span><span id="misPuntos"></span>
+                                            <div id="bloquePuntos"><span id="indicadorPuntos"><span class="puntuacion">Puntos: </span><span id="misPuntos"></span></span></div>
                                         </div>
                                     </div>
                                     <span id="mensajeTituloCancion" class="mensajeAdivina">Título de la canción</span>
@@ -243,11 +290,11 @@
                                     <div class="ui-block-e"><a data-role="button" class="botonLetra">Y</a></div>
                                 </div>
                                 <div class="ui-grid-d">
-                                    <div class="ui-block-a"><a data-role="button" class="ui-btn ui-icon-info ui-btn-inline ui-btn-icon-notext botonAyuda"></a></div>
+                                    <div id="botonAyudaJuego" class="ui-block-a"><a data-role="button" class="ui-btn ui-icon-info ui-btn-inline ui-btn-icon-notext botonAyuda"></a></div>
                                     <div class="ui-block-b"></div>
                                     <div class="ui-block-c"><a data-role="button" class="botonLetra">Z</a></div>
                                     <div class="ui-block-d"></div>
-                                    <div class="ui-block-e"><a data-role="button" class="ui-btn ui-icon-home ui-btn-inline ui-btn-icon-notext botonHome"></a></div>
+                                    <div id="botonHomeJuego" class="ui-block-e"><a data-role="button" class="ui-btn ui-icon-home ui-btn-inline ui-btn-icon-notext botonHome"></a></div>
                                 </div>
                             </div>
                     </div>
@@ -266,58 +313,76 @@
             <nav id="cabeceraAcierto" class="blue darken-4">
                 <span id="">aork2.com</span>
                 <!-- <a data-role="button" class="ui-btn ui-icon-home ui-btn-right ui-btn-icon-notext botonHomeCabecera"></a>-->
-                <a data-iconpos="notext" class="ui-btn-right"><img src="/images/home.png" class="botonHomeCabecera" /></a>
+
+                <a data-iconpos="notext" class="ui-btn-right"><img id="imgHomeCabecera" src="/images/home.png" class="botonHomeCabecera" /></a>
             </nav>
             <br />
-            <div id="divResultado" class="ui-body ui-body-a">
-                <h5 id="resultado"></h5>
-                <div id="marcador"></div>
-                <br />
-                <div class="centrado">
-                    <div id="tituloObjetivo"></div>
-                    <span id="aciertoAutor" class="izquierda">Autor: </span><span id="autor"></span><br />
-                    <span id="aciertoAlbum" class="izquierda">Álbum: </span><span id="album"></span><br /><br />
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a" id="divImagenAutor">
-                            <div id="imagenAutor" ></div>
-                        </div>
-                        <div class="ui-block-b izquierda">
-                                 <div id="botonDeezer" class="container">
-                                    <br />
-                                    <span id="escucharCancion">Escucha la canción completa en</span><br /><br />
-                                    <div id="enlaceCancion" >
-                                        <img id="enlaceDeezer" src="/images/deezer.jpeg" alt="Deezer" />
-                                    </div>
-                                </div>
-                                <!--
-                                <div id="capturarPantalla" class="ui-body ui-body-a">
-                                    <div id="cuadroCaptura" class="ui-grid-a">
-                                        <div class="ui-block-a">
-                                            <a class="botonCaptura"><img src="/images/compartir.png" width="40px" height="40px" alt="captura" /></a>
-                                        </div>
-                                        <div class="ui-block-b">
-                                            <span class="textoCapturaCanciones">+10 puntos</span>
+            <br />
+            <br />
+          <div id="divExito">
+            <div id="bloqueExito">
+                <div id="divResultado" class="ui-body ui-body-a">
+                    <h5 id="resultado"></h5>
+                    <div id="marcador"></div>
+                    <br />
+                    <div class="centrado">
+                        <div id="tituloObjetivo"></div>
+                        <span id="aciertoAutor" class="izquierda">Autor: </span><span id="autor"></span><br />
+                        <span id="aciertoAlbum" class="izquierda">Álbum: </span><span id="album"></span><br /><br />
+                        <div class="row">
+                            <div id="divImagenAutor" class="col s6">
+                                <div id="imagenAutor" class="container" ></div>
+                            </div>
+                            <div id="cuadroDerecho" class="col s6">
+                                    <div id="botonDeezer" class="container">
+                                        <span id="escucharCancion">Escúchala en</span>
+                                        <div id="enlaceCancion" >
+                                            <img id="enlaceDeezer" src="images/deezer.jpeg" class="responsive-img" alt="Deezer" />
                                         </div>
                                     </div>
-                                </div>
-                                -->
+                                    <!--
+                                    <div id="cuadroAndroid">
+                                        <div id="cuadroCaptura" class="ui-grid-a">
+                                            <div class="ui-block-a">
+                                                <a class="botonGooglePlay"><img id="logoPlay" src="images/Google_play.png" width="50px" height="50px" alt="Google Play" /></a>
+                                            </div>
+                                            <div class="ui-block-b">
+                                                <span class="textoAork2Android">Descarga Aork2 para Android</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    -->
+
+                                    <div id="cuadroAndroid" class="centrado">
+                                        <a class="botonGooglePlay"><img id="logoPlay" src="images/Google_play2.png" class="circle responsive-img" alt="Google Play" /></a>
+                                        <br />
+                                        <span id="googlePlayText">aork2 para Android</span>
+                                    </div>
+                            </div>
                         </div>
+
                     </div>
 
                 </div>
+                <br />
 
-            </div>
-            <br />
-
-            <!-- aork2.- Juego Induvidual -->
-            <div id="pubJuegoIndividual" class="centrado">
-            </div>
-            <br/>
-            <div class="container">
-                <div id="pieAcierto">
-                    <a id="botonSiguiente" class="btn-large waves-effect waves-light">Continuar</a>
-                    <a id="botonRetar" class="btn-large waves-effect waves-light">Retar a un Amigo</a>
+                <!-- aork2.- Juego Induvidual -->
+                <div id="pubJuegoIndividual" class="centrado">
                 </div>
+                <br/>
+                <div class="container">
+                    <div id="pieAcierto" class="row">
+                      <!--
+                      <div class="col s6">
+                        <a class="btn-large waves-effect waves-light botonHomeBajo">Salir</a>
+                      </div>-->
+                      <div id="pieContinuar" class="col s12">
+                        <a id="botonSiguiente" class="btn-large waves-effect waves-light">Continuar</a>
+                        <a id="botonRetar" class="btn-large waves-effect waves-light">Retar a un Amigo</a>
+                      </div>
+                    </div>
+                </div>
+              </div>
             </div>
         </div>
 
@@ -422,9 +487,9 @@
                 <div id="divBusqueda" class="ui-body ui-body-a">
                     <br />
                     <div class="input-field col s12">
-                        <label id="labelCajon" for="cajonBusqueda" class="active">título, artista ... </label>
+                        <!--<label id="labelCajon" for="cajonBusqueda" class="active">título, artista ... </label>-->
                         <br />
-                        <input placeholder=" Toca aquí" id="cajonBusqueda" type="text" class="validate" data-role="none">
+                        <input placeholder=" Toca aquí y escribe el nombre" id="cajonBusqueda" type="text" class="validate" data-role="none">
                     </div>
                     <script type="text/javascript">$("#cajonBusqueda").focus();</script>
                     <br />
@@ -483,11 +548,10 @@
             <div data-role="content" id="fondoBuscarArtista">
                 <br />
                 <div id="divBuscarArtista" class="ui-body ui-body-a">
-                    <br />
                     <div class="input-field col s12">
-                        <label id="labelBuscarArtista" for="cajonBuscarArtista">artista, grupo ... </label>
+                        <!-- <label id="labelBuscarArtista" for="cajonBuscarArtista">artista, grupo ... </label>-->
                         <br />
-                        <input placeholder=" Toca aquí" id="cajonBuscarArtista" type="text" class="validate" data-role="none">
+                        <input placeholder=" Toca aquí y escribe el nombre" id="cajonBuscarArtista" type="text" class="validate" data-role="none">
                     </div>
                     <script type="text/javascript">$("#cajonBuscarArtista").focus();</script>
                     <br />
@@ -498,19 +562,23 @@
                         <span id="MensajeBuscarArtista">Busca un artista o grupo y juega con sus canciones.</span>
                         <br /><br />
                         <span id="retoBuscarArtista">O reta a un amigo y ganas 35 puntos. <br /><br />  No te preocupes por si tu amigo no tiene la aplicación, si no la tiene instalada el juego se le abrirá en el navegador de su móvil.</span>
+                        <br />
                     </div>
                 </div>
                 <div id="divResultadoBuscarArtista">
                     <a id="botonLimpiarBuscarArtista" onclick="limpiarArtistas()" class="btn-large waves-effect waves-light botones_inicio">Limpiar Resultados</a>
                     <br />
-                    <div id="resultadoBuscarArtista" class="ui-body ui-body-a">
+                    <div id="resultadoBuscarArtista" class="">
                         <div id="dz-root2"></div>
                         <br />
+                        <!--
                         <div id="divGifCargandoBuscarArtista" class="table-responsive">
                             <img src="/images/cargando.gif" id="gifCargandoBuscarArtista" />
-                            <div id="listaBuscarArtista"></div>
+                            <div id="listaBuscarArtista" class="collection"></div>
                         </div>
-
+                        -->
+                        <img src="/images/cargando.gif" id="gifCargandoBuscarArtista" />
+                        <div id="listaBuscarArtista" class="collection"></div>
                         <div id="artistaElegido"></div>
                         <br />
                         <!-- <span id="pruebaAudioArtista"></span> -->
@@ -685,7 +753,7 @@
                     <div id="datosRetoArtista" class="container">
                         <br />
                         <div id="imagenRetoArtista"></div>
-                        <p id="mensaje1RetoArtista"><span id="spanRetoArtista">Te han retado a jugar al ahorcado con canciones de </span><span id="nombreRetoArtista"></span><span id="spanRetoArtista2"></span></p>
+                        <p id="mensaje1RetoArtista"><span id="spanRetoArtista">Has sido retado a jugar al ahorcado con canciones de </span><span id="nombreRetoArtista"></span><span id="spanRetoArtista2"></span></p>
                         <h4 id="preguntaAceptarReto">¿Aceptas el reto?</h4>
                         <div class="row">
                             <div class="col s6"><a id="botonAceptarRetoArtista" class="btn waves-effect waves-light">Aceptar</a></div>
@@ -731,6 +799,11 @@
                             <div class="col s6"><a id="botonSalirFinRetoArtista" class="btn waves-effect waves-light">Salir</a></div>
                         </div>
                     </div>
+                    <br />
+                    <div id="divEscucharDeezer" class="container">
+                        <p id="">Toca debajo para escuchar este artista en Deezer</p>
+                        <img id="escucharListaArtista" src="/images/deezer.jpeg" alt="Deezer" class="responsive-img">
+                    </div>
                 </div>
             </div>
         </div>
@@ -765,6 +838,7 @@
                 </div>
             </div>
         </div>
+
 
 
     <!-- ##################################################################################################################################################

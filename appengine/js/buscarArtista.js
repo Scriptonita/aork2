@@ -92,26 +92,30 @@ function buscarArtista(aux){
                     for (var i=0, len = json.data.length; i<len ; i++)
                     {
                         artista = json.data[i].name.replace(/(['"])/g, "\\$1");
-                        $('#listaBuscarArtista').append(			      			
-                             '<br /> \
-                            <div class="botonCanciones ui-body ui-body-a ui-corner-all"> \
+                        $('#listaBuscarArtista').append(
+                            '<div class="collection-item"> \
+                                <p id="nombreArtistaText">' + json.data[i].name + '</p> \
                                 <div class="ui-grid-a"> \
                                     <br /> \
                                     <div class="ui-block-a"> \
                                         <img src="' + json.data[i].picture + '"/> \
                                     </div> \
                                     <div class="ui-block-b"> \
-                                       <p><br />' + json.data[i].name + ' <br /></p> \
-                                       <a id="botonAJugarArtista" onclick="jugarEsteArtista(event, \'' + json.data[i].tracklist + '\',\'' + json.data[i].picture + '\');$deezerArtista=\'' + json.data[i].name + '\';$imagenArtista=\'' + json.data[i].picture + '\'" class="btn-large waves-effect waves-light botones_inicio">Jugar</a>\
-                                    </div> \
-                                    <br /> \
-                                       <div class="row"> \
-                                            <div class="col s3"><span id="botonFacebook_' + i + '"></span></div>      \
-                                            <div class="col s3"><span id="botonTwitter_' + i + '"></span></div>       \
-                                            <div class="col s3"><span id="botonWhatsapp_' + i + '"></span></div>      \
-                                            <div class="col s3"><span id="botonCompartir_' + i + '"></span></div>         \
+                                        <span id="retarArtistaText">Manda tu reto</span>  \
+                                        <br />  \
+                                        <div class="row"> \
+                                            <div class="col s6"><span id="botonFacebook_' + i + '"></span></div>      \
+                                            <div class="col s6"><span id="botonTwitter_' + i + '"></span></div>       \
+                                        </div> \
+                                        <div class="row"> \
+                                            <div class="col s6"><span id="botonWhatsapp_' + i + '"></span></div>      \
+                                            <div class="col s6"><span id="botonCompartir_' + i + '"></span></div>         \
                                         </div>          \
-                                </div>\
+                                    </div> \
+                                    <br />  \
+                                </div>  \
+                                <br /> \
+                                <a id="botonAJugarArtista" onclick="jugarEsteArtista(event, \'' + json.data[i].tracklist + '\',\'' + json.data[i].picture + '\');$deezerArtista=\'' + json.data[i].name + '\';$imagenArtista=\'' + json.data[i].picture + '\'" class="btn-large waves-effect waves-light botones_inicio">Jugar</a>\
                             </div>' );
                             
                             $url = 'http://aork2.com/artista/' + json.data[i].id;

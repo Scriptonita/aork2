@@ -10,16 +10,16 @@ function elegirEstaCancion(CancionID, artista, titulo, preview){
                              <audio controls> \
                                 <source src=" ' + preview +  ' " type="audio/mpeg" id="audio"> \
                                 Your browser does not support the audio element. \
-                            </audio> '        
+                            </audio> '
     );
     $("#pruebaAudio").show();
     $url = 'http://aork2.com/' + CancionID;
-    
+
     $("#botonTwitter").html('<a onclick="compartirTwitter(\'' + $compartirTitleTwitter + '\', \'' + $url + '\', 20)"><img src="images/twitter.png" alt="" /></a>');
     $("#botonFacebook").html('<a onclick="compartirFacebook(\'' + $compartirTitleFacebook + '\', \'' + $url + '\', 20)"><img src="images/facebook.png" alt="" /></a>');
     $("#botonCompartir").html('<a onclick="compartirCompartir(\'' + $compartirTitleTelegram + '\', \'' + $url + '\', 20)"><img src="images/compartir.png" alt="" /></a>');
     $("#botonWhatsapp").html('<a onclick="compartirWhatsapp(\'' + $compartirTitleWhatsapp + '\', \'' + $url + '\', 20)"><img src="images/whatsapp.png" alt="" /></a>');
-        
+
     $("#explicacionCrear").hide();
     $("#compartir").show();
     $("#botonNoEsCancion").show();
@@ -49,23 +49,23 @@ function volverListadoCanciones() {
     $("#cancionElegida").hide();
     $("#pruebaAudio").html('');
     $("#pruebaAudio").hide();
-    $url = '';    
+    $url = '';
     $("#botonTwitter").html('');
     $("#botonFacebook").html('');
     $("#botonTelegram").html('');
     $("#botonWhatsapp").html('');
-    $("#compartir").hide();    
+    $("#compartir").hide();
     $("#botonNoEsCancion").hide();
     $("#resultadosBuscarCancion").show();
     $("#explicacionCrear").show();
 }
 
 // Función para la búsqueda de una canción o artista. Nos devuelve un listado de canciones.
-function buscarCancion(aux){	
-			limpiarCanciones();	
-            $("#resultadoBusqueda").show(); 
-            $("#gifCargando").show();      
-            DZ.api('/search?q='+aux, function(json){  
+function buscarCancion(aux){
+			limpiarCanciones();
+            $("#resultadoBusqueda").show();
+            $("#gifCargando").show();
+            DZ.api('/search?q='+aux, function(json){
                 if (json.data.length > 0) {
                     $("#gifCargando").hide();
                     for (var i=0, len = json.data.length; i<len ; i++)
@@ -75,7 +75,7 @@ function buscarCancion(aux){
                         album = json.data[i].album.title.replace(/(['"])/g, "\\$1");
                         preview = json.data[i].preview;
                         expresion = "elegirEstaCancion('" + json.data[i].id + "','" + artista + "','" + cancion + "','" +  preview + "');"
-                        $('#resultadosBuscarCancion').append(			      			
+                        $('#resultadosBuscarCancion').append(
                              '<br /> \
                             <div class="botonCanciones ui-body ui-body-a ui-corner-all" id="' + json.data[i].id + '" onclick="' + expresion + '"> \
                                 <div class="ui-grid-a"> \
@@ -91,11 +91,10 @@ function buscarCancion(aux){
                     }
                 } else {
                     $('#resultadosBuscarCancion').html($idiomaSinResultado);
-                }                
+                }
 			});
             $("#divBusqueda").hide();
 };
-
 
 
 // Cuando entramos al juego a través de un reto que nos han mandado, esta función obtiene la canción del reto y nos lleva a la página de juego.
@@ -105,6 +104,7 @@ function insertarReto (idTrack) {
             $track = json;
             $puntos = parseInt(window.localStorage.getItem("puntos"));
             $("#misPuntos").html($puntos);
+            $vida = 6;
             $("#miVida").html($vida);
             window.analytics.trackView('Entra Por Reto Canción');
             iniciarReto();
@@ -113,17 +113,25 @@ function insertarReto (idTrack) {
             alert ($idiomaSinCancion);
             setTimeout($.mobile.changePage("/"), 10);
         }
-      }); 
+      });
 }
 
-// Función que prepara la pantalla de juego y lo inicia.
-function iniciarReto() {
-    $(".botonLetra").show();
-    $nReto = parseInt(window.localStorage.getItem("nReto"));
+
+function sumaUnReto() {
+    $nReto = parseInt(localStorage.getItem("nReto"));
     if (!$nReto) {
         $nReto = 0;
     }
     $nReto++;
+    localStorage.setItem("nReto", $nReto);
+}
+
+// Función que prepara la pantalla de juego y lo inicia.
+function iniciarReto() {
+    $(".botonLetra").removeClass("pulsada");
+    $(".botonLetra").show();
+    $("#fondo").css("background-image", 'url(images/6.png)');
+    sumaUnReto();
     window.localStorage.setItem("nReto", $nReto);
     $esReto = true;
     $aciertosReto = parseInt(window.localStorage.getItem("aciertosReto"));
@@ -133,7 +141,7 @@ function iniciarReto() {
                              <audio controls> \
                                 <source src=" ' + $track.preview +  ' " type="audio/mpeg" id="audio"> \
                                 Your browser does not support the audio element. \
-                            </audio> '        
+                            </audio> '
     );
     $vida = 6;
     $puntos = parseInt(window.localStorage.getItem("puntos"));
@@ -146,36 +154,44 @@ function iniciarReto() {
         }
     }
     $("#adivina").html($aux);
-
     centrarVerticalmente("#divJuego","#bloqueJuego");
+		$hacerTourJuego = localStorage.getItem("tourJuego");
+    if (!$hacerTourJuego) {
+        tourJuego();
+        localStorage.setItem("tourJuego", true);
+    }
     prepararPaginaAcierto();
 };
 
 
 // Al entrar al juego desde un enlace, esta función comprueba si se trata de un reto, tanto de canción individual o reto de artista.
 function comprobarReto () {
-    if ($idTrackReto != 0) { 
-        insertarReto($idTrackReto);        
-    } else if ($idArtistaReto != 0) { 
-        DZ.api('/artist/' + $idArtistaReto, function(json){ 
+    console.log("Comprobando reto...");
+    if ($idTrackReto != 0) {
+        insertarReto($idTrackReto);
+    } else if ($idArtistaReto != 0) {
+        DZ.api('/artist/' + $idArtistaReto, function(json){
+            console.log("Obteniendo datos del artista del reto....");
             if (json) {
                 $tracklist = json.tracklist;
                 $imagenArtista = json.picture;
                 $deezerArtista = json.link;
                 $("#imagenRetoArtista").html("<a href='" + $deezerArtista + "'><img src='" + $imagenArtista + "' alt='imagen artista' /></a>");
                 $("#nombreRetoArtista").html(json.name);
+                sumaUnReto();
+                $esRetoArtista = true;
                 window.analytics.trackView('Entra Por Reto Artista');
                 centrarVerticalmente("#divAceptarArtista","#bloqueAceptarArtista");
-                $.mobile.changePage("#paginaAceptarArtista",{});                
+                console.log("Enviando a página de reto..");
+                $.mobile.changePage("#paginaAceptarArtista",{});
             }
             else {
                 alert ("Lo siento, no hemos encontrado al artista");
             }
         });
     } else {
+        console.log("No se encuentra ningún reto, enviando a página de inicio...");
         centrarVerticalmente("#divInicio","#menuInicio");
-        $.mobile.changePage("#paginaInicio",{}); 
+        $.mobile.changePage("#paginaInicio",{});
     }
 }
-
-

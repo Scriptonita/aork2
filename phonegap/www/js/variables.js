@@ -11,6 +11,7 @@ if (isNaN($puntos)) {
   window.localStorage.setItem("puntos", $puntos);
 }
 $esReto = false;
+$esRetoArtista = false
 $ads = false;
 $tipoJuego = "1";
 $enhorabuena = "¡¡Enhorabuena!!";
@@ -38,6 +39,8 @@ $compartirTitleWhatsappArt = "¿Aceptas el reto? Acierta las canciones de este a
 $compartirTitleTelegramArt = "¿Aceptas el reto? Acierta las canciones de este artista: ";
 
 $compartirCaptura = "Jugando al aork2";
+
+$enTour = false;
 
 $estilos = {
   data: [

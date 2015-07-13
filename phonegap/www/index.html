@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <!--
 
-    App creada por Javi HG (##\\ contacto //O.O\\ @ //O-O\\ scriptonita //O_O\\ . //OvO\\ com //##)
+    App creada por Javi HG (##\\ javier //O.O\\ @ //O-O\\ kombid //O_O\\ . //OvO\\ com //##)
     Todas las canciones están extraidas a través de la API de Deezer y se cargan desde los servidores de Deezer.
 
     Frameworks / Plugins /Librerías / API usadas:
     - PhoneGap              http://www.phonegap.com
         * Social Sharing    https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin
+        * URL Scheme        https://github.com/EddyVerbruggen/Custom-URL-scheme
         * ScreenShot        https://github.com/gitawego/cordova-screenshot
-        * WebIntents        https://github.com/Initsogar/cordova-webintent
-        * PushIP            http://www.puship.com
-        * Admob             https://github.com/appfeel/admob-google-cordova
+        * Admob             https://github.com/floatinghotpot/cordova-admob-pro
+                            -  https://github.com/floatinghotpot/cordova-admob-pro/wiki/00.-How-To-Use-with-PhoneGap-Build
         * Analytics         https://github.com/danwilson/google-analytics-plugin
-    - Sublime Text          http://www.sublimetext.com/
+    - Brackets              http://brackets.io
     - Jquery                http://jquery.com
     - Jquery mobile         http://jquerymobile.com
     - Materialize           http://materializecss.com
-    - Iconos                http://www.gieson.com/Library/projects/utilities/icon_slayer
+    - Mensajes Push         http://www.puship.com
+    - Webtour               https://github.com/yckart/jquery.tour.js
+    - Iconos                http://www.gieson.com/Library/projects/utilities/icon_slayer/
     - Deezer                http://developers.deezer.com
     - Stackoverflow         http://stackoverflow.com
 
@@ -41,8 +43,6 @@
         <title>Juego del Ahorcado con Canciones</title>
 
         <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/admob.js"></script>
 
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
@@ -52,9 +52,13 @@
         <link rel="stylesheet" type="text/css" href="stylesheets/jquery.mobile-1.4.5.min.css" />
         <link rel="stylesheet" type="text/css" href="stylesheets/materialize.min.css" />
         <link rel="stylesheet" type="text/css" href="stylesheets/index.css" />
+        <link rel="stylesheet" type="text/css" href="stylesheets/webtour.css" />
 
         <!--  Insertamos la llamada a la API de Deezer -->
         <script type="text/javascript" src="js/dz.js"></script>
+
+        <!-- Insertamos el script para Admob
+        <script type="text/javascript" src="js/admob.js"></script> -->
 
         <!-- <script type="text/javascript" src="/js/tracks.js"></script> -->
         <script type="text/javascript" src="js/variables.js"></script>
@@ -63,11 +67,99 @@
         <script type="text/javascript" src="js/buscarArtista.js"></script>
         <script type="text/javascript" src="js/buscarCancion.js"></script>
         <script type="text/javascript" src="js/idiomas.js"></script>
+        <script type="text/javascript" src="js/tours.js"></script>
+        <script type="text/javascript" src="js/admob.js"></script>
+        <!-- Script de Webtour -->
+        <script type="text/javascript" src='js/jquery.tour.js'></script>
+
+        <script type="text/javascript" src="js/index.js"></script>
     </head>
     <body>
 
-
     <!-- ##################################################################################################################################################
+    ##################################################################################################################################################
+
+        Página de inicio de la aplicación
+
+    ################################################################################################################################################## -->
+    <div data-role="page" id="paginaInicio">
+        <div id="divInicio">
+            <div id="menuInicio">
+                <div class="container">
+                    <!-- <div class="row"> -->
+                        <div class="row">
+                            <!-- <p id="modosJuego">Modos de juego</p>-->
+                            <div class="col s4">
+                                <span id="InicioSolitario" class="textInicio">Solitario</span><br />
+                                <a id="botonInicioJugar" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-image-timer-auto large"></i></a>
+                            </div>
+                            <div class="col s4">
+                                <span id="InicioArtista" class="textInicio">Artista</span><br />
+                                <a id="botonInicioArtista" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-action-stars large"></i></a>
+                            </div>
+                            <div class="col s4">
+                                <span id="InicioEstilos" class="textInicio">Estilos</span><br />
+                                <a id="botonInicioEstilos" class="waves-effect waves-light btn-floating btn-large orange botones_inicio"><i class="mdi-action-assessment large"></i></a>
+                            </div>
+                        </div>
+                        <a id="botonInicioCrear" class="waves-effect waves-light btn-large orange botones_inicio_2">Reta a un amigo<i class="mdi-social-share right"></i></a>
+                </div>
+                        <br />
+                        <div id="retosAork2" >
+                                <div class="container cyan accent-4 z-depth-4">
+                                    <br />
+                                    <h6>Reto diario #retoAork2</h6>
+                                    <div id="bloqueRetoDiario" class="row">
+                                        <div class="col s1">
+                                            <i id="retoPosterior" class="mdi-hardware-keyboard-arrow-left"></i>
+                                        </div>
+                                        <div class="col s3">
+                                            <img id="imgRetoDiario" src="" alt="" class="circle responsive-img" />
+                                        </div>
+                                        <div class="col s7 izquierda">
+                                            <p class="izquierda">
+                                                <span id="retoPortadaAutor">Artista</span><br />
+                                                <span id="retoPortadaComentario">Gracias a</span>
+                                            </p>
+                                        </div>
+                                        <div class="col s1">
+                                            <i id="retoAnterior" class="mdi-hardware-keyboard-arrow-right"></i>
+                                        </div>
+
+                                    </div>
+                                    <br />
+                                </div>
+                        </div>
+                        <br /><br />
+                        <div id="bloqueBase" class="row">
+                            <div class="col s6">
+                                <div id ="divDeezer" class="ui-body ui-body-a ui-corner-all">
+                                    <span id="gracias">Gracias a</span>
+                                    <img onClick="abrirEnlaceExterno('http://www.deezer.com/?app_id=158051')" id="logoDeezer" src="images/deezer.jpeg" alt="Logo Deezer" />
+                                </div>
+                            </div>
+                            <div id="bloqueRedesSociales" class="col s6">
+                                    <div id="iconosRedes" class="row">
+                                        <div class="col s6">
+                                            <img onClick="abrirEnlaceExterno('http://twitter.com/_aork2_')" id="aork2-twitter" src="images/twitter_80.jpg" alt="twitter" class="circle responsive-img z-depth-4" />
+                                        </div>
+                                        <div class="col s6">
+                                            <img onClick="abrirEnlaceExterno('http://www.facebook.com/aork2')" id="aork2-facebook" src="images/facebook_80.jpg" alt="facebook" class="circle responsive-img z-depth-4" />
+
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        <!--
+        <div id="divAuxiliar" class="container">
+            <h4>Scriptonita</h4>
+        </div>
+    -->
+    </div>
+
+<!-- ##################################################################################################################################################
     ##################################################################################################################################################
 
         Página de Carga
@@ -83,49 +175,6 @@
                         <h4 id="mensajeCargando"><b>Cargando</b></h4>
                         <div class="progress">
                             <div class="indeterminate"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    <!-- ##################################################################################################################################################
-    ##################################################################################################################################################
-
-        Página de inicio de la aplicación
-
-    ################################################################################################################################################## -->
-        <div data-role="page" id="paginaInicio">
-            <div id="divInicio">
-                <div id="menuInicio">
-                    <div class="container">
-                        <div class="row">
-                            <a id="botonInicioJugar" class="btn-large waves-effect waves-light orange botones_inicio">Jugar</a>
-                            <br />
-                            <a id="botonInicioArtista" class="btn-large waves-effect waves-light orange botones_inicio">Jugar por artista</a>
-                            <br />
-                            <a id="botonInicioEstilos" class="btn-large waves-effect waves-light orange botones_inicio">Jugar por estilos</a>
-                            <br />
-                            <a id="botonInicioCrear" class="btn-large waves-effect waves-light orange botones_inicio">Retar a un amigo</a>
-                            <br />
-                            <div id ="divDeezer" class="ui-body ui-body-a ui-corner-all">
-                                <span id="gracias">Gracias a</span>
-                                <img onClick="abrirEnlaceExterno('http://www.deezer.com')" id="logoDeezer" src="images/deezer.jpeg" alt="Logo Deezer" />
-                            </div>
-                            <br />
-                            <div class="centrado">
-                                <div class="row">
-                                    <div class="col s4">
-                                        <img onClick="abrirEnlaceExterno('http://www.facebook.com/aork2')" id="aork2-facebook" src="images/facebook.png" alt="facebook">
-                                    </div>
-                                    <div class="col s4">
-                                        <img id="imgCC" alt="Licencia de Creative Commons" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" alt="licencia" />
-                                    </div>
-                                    <div class="col s4">
-                                    <img onClick="abrirEnlaceExterno('http://twitter.com/_aork2_')" id="aork2-twitter" src="images/twitter.png" alt="twitter">
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -157,24 +206,24 @@
                     </div>
                     <div id="contenedorBotonesEstilo">
                         <div class="row">
-                                <div class="col s4"><a id="197" class="btn waves-effect waves-light orange botonEstilo">Español</a></div>
-                                <div class="col s4"><a id="132" class="btn waves-effect waves-light orange botonEstilo">POP</a></div>
-                                <div class="col s4"><a id="152" class="btn waves-effect waves-light orange botonEstilo">Rock</a></div>
+                                <div class="col s4"><a id="197" class="waves-effect waves-light btn orange botonEstilo">Español</a></div>
+                                <div class="col s4"><a id="132" class="waves-effect waves-light btn orange botonEstilo">POP</a></div>
+                                <div class="col s4"><a id="152" class="waves-effect waves-light btn orange botonEstilo">Rock</a></div>
                         </div>
                         <div class="row">
-                                <div class="col s4"><a id="116" class="btn waves-effect waves-light orange botonEstilo">Hip Hop</a></div>
-                                <div class="col s4"><a id="165" class="btn waves-effect waves-light orange botonEstilo">R&amp;B/Funk</a></div>
-                                <div class="col s4"><a id="144" class="btn waves-effect waves-light orange botonEstilo">Reggae</a></div>
+                                <div class="col s4"><a id="116" class="waves-effect waves-light btn orange botonEstilo">Hip Hop</a></div>
+                                <div class="col s4"><a id="165" class="waves-effect waves-light btn orange botonEstilo">R&amp;B/Funk</a></div>
+                                <div class="col s4"><a id="144" class="waves-effect waves-light btn orange botonEstilo">Reggae</a></div>
                         </div>
                         <div class="row">
-                                <div class="col s4"><a id="85" class="btn waves-effect waves-light orange botonEstilo">Alternativo</a></div>
-                                <div class="col s4"><a id="153" class="btn waves-effect waves-light orange botonEstilo">Blues</a></div>
-                                <div class="col s4"><a id="98" class="btn waves-effect waves-light orange botonEstilo">Clásica</a></div>
+                                <div class="col s4"><a id="85" class="waves-effect waves-light btn orange botonEstilo">Alternativo</a></div>
+                                <div class="col s4"><a id="153" class="waves-effect waves-light btn orange botonEstilo">Blues</a></div>
+                                <div class="col s4"><a id="98" class="waves-effect waves-light btn orange botonEstilo">Clásica</a></div>
                         </div>
                         <div class="row">
-                                <div class="col s4"><a id="113" class="btn waves-effect waves-light orange botonEstilo">Dance</a></div>
-                                <div class="col s4"><a id="106" class="btn waves-effect waves-light orange botonEstilo">Electro</a></div>
-                                <div class="col s4"><a id="32"  class="btn waves-effect waves-light orange botonEstilo">Europa</a></div>
+                                <div class="col s4"><a id="113" class="waves-effect waves-light btn orange botonEstilo">Dance</a></div>
+                                <div class="col s4"><a id="106" class="waves-effect waves-light btn orange botonEstilo">Electro</a></div>
+                                <div class="col s4"><a id="32"  class="waves-effect waves-light btn orange botonEstilo">Europa</a></div>
                         </div>
 
                     </div>
@@ -197,14 +246,14 @@
                     <div id="bloqueJuego">
                             <div id="containerAdivina" class="container">
                                 <div class="divAdivina">
-                                    <div class="ui-grid-a">
-                                        <div class="ui-block-a laVida">
-                                            <span class="vida">Vida: </span><span id="miVida"></span>
-                                        </div>
-                                        <div class="ui-block-b losPuntos">
-                                            <span class="puntuacion">Puntos: </span><span id="misPuntos"></span>
-                                        </div>
-                                    </div>
+                                  <div class="ui-grid-a">
+                                      <div class="ui-block-a laVida">
+                                          <div id="bloqueVida"><span id="indicadorVida"><span class="vida">Vida: </span><span id="miVida"></span></span></div>
+                                      </div>
+                                      <div class="ui-block-b losPuntos">
+                                          <div id="bloquePuntos"><span id="indicadorPuntos"><span class="puntuacion">Puntos: </span><span id="misPuntos"></span></span></div>
+                                      </div>
+                                  </div>
                                     <span id="mensajeTituloCancion" class="mensajeAdivina">Título de la canción</span>
                                     <br /><br/>
                                     <span id="insertarAudio"></span>
@@ -275,7 +324,7 @@
             <nav id="cabeceraAcierto" class="blue darken-4">
                 <span id="">aork2.com</span>
                 <!-- <a data-role="button" class="ui-btn ui-icon-home ui-btn-right ui-btn-icon-notext botonHomeCabecera"></a>-->
-                <a data-iconpos="notext" class="ui-btn-right"><img src="images/home.png" class="botonHomeCabecera" /></a>
+                <a data-iconpos="notext" class="ui-btn-right"><img id="imgHomeCabecera" src="images/home.png" class="botonHomeCabecera" /></a>
             </nav>
             <br />
             <div id="divResultado" class="ui-body ui-body-a">
@@ -294,13 +343,14 @@
                                  <div id="botonDeezer" class="container">
                                     <span id="escucharCancion">Escúchala en</span>
                                     <div id="enlaceCancion" >
-                                        <img id="enlaceDeezer" src="images/deezer.jpeg" alt="Deezer" />
+                                        <img id="enlaceDeezer" src="images/deezer.jpeg" class="responsive-img" alt="Deezer" />
                                     </div>
                                 </div>
                                 <div id="capturarPantalla" class="ui-body ui-body-a">
                                     <div id="cuadroCaptura" class="ui-grid-a">
                                         <div class="ui-block-a">
-                                            <a class="botonCaptura"><img src="images/compartir.png" width="40px" height="40px" alt="captura" /></a>
+                                            <!--<a class="botonCaptura"><img src="images/compartir.png" width="40px" height="40px" alt="captura" /></a>-->
+                                            <a class="botonCaptura"><img src="images/compartir.png" class="responsive-img" alt="captura" /></a>
                                         </div>
                                         <div class="ui-block-b">
                                             <span class="textoCapturaCanciones">+10 puntos</span>
@@ -428,11 +478,9 @@
                 <br />
                 <div id="divBusqueda" class="ui-body ui-body-a">
                     <div id="explicacionCrear" class="centrado">
-                        <br />
                         <div class="input-field col s12">
-                            <label id="labelCajon" for="cajonBusqueda" class="active">título, artista ... </label>
-                            <!--<input id="cajonBusqueda" type="text" name="usuario" class="validate" data-role="none" />-->
-                            <br />
+                            <!--<label id="labelCajon" for="cajonBusqueda" class="active">título, artista ... </label>
+                            <input id="cajonBusqueda" type="text" name="usuario" class="validate" data-role="none" />-->
                             <input placeholder=" Toca aquí" id="cajonBusqueda" type="text" class="validate" data-role="none">
                         </div>
                     <script type="text/javascript">$("#cajonBusqueda").focus();</script>
@@ -440,7 +488,7 @@
                     <a id="botonBuscarCancion" onclick="buscarCancion(document.getElementById('cajonBusqueda').value)" class="btn waves-effect waves-light letrasBlancas">Buscar</a>
                     <br />
                         <br />
-                        <span id="retoMensaje">Busca, elige una canción y reta a un amigo a ver si la conoce.<br /><br /> No te preocupes por si tu amigo no tiene la aplicación, si no la tiene instalada el juego se le abrirá en el navegador de su móvil.</span>
+                        <span id="retoMensaje">Busca una canción pot título o autor y reta a un amigo a ver si la conoce.<br /><br /> No te preocupes por si tu amigo no tiene la aplicación, si no la tiene instalada el juego se le abrirá en el navegador de su móvil.</span>
                         <br /><br />
                         <span id="retoGanasPuntos">Ganas 20 puntos</span>
                     </div>
@@ -494,13 +542,7 @@
             <div data-role="content" id="fondoBuscarArtista">
                 <br />
                 <div id="divBuscarArtista" class="ui-body ui-body-a">
-                    <br />
                     <div class="input-field col s12">
-
-                        <label id="labelBuscarArtista" for="cajonBuscarArtista">artista, grupo ... </label>
-                        <br />
-                        <!--<input id="cajonBuscarArtista" type="text" name="usuario" class="validate" data-role="none" /> -->
-
                         <input placeholder=" Toca aquí" id="cajonBuscarArtista" type="text" class="validate" data-role="none">
                     </div>
                     <script type="text/javascript">$("#cajonBuscarArtista").focus();</script>
@@ -522,11 +564,8 @@
                     <div id="resultadoBuscarArtista" class="ui-body ui-body-a">
                         <div id="dz-root2"></div>
                         <br />
-                        <div id="divGifCargandoBuscarArtista" class="table-responsive">
-                            <img src="images/cargando.gif" id="gifCargandoBuscarArtista" />
-                            <div id="listaBuscarArtista"></div>
-                        </div>
-
+                        <img src="/images/cargando.gif" id="gifCargandoBuscarArtista" />
+                        <div id="listaBuscarArtista" class="collection"></div>
                         <div id="artistaElegido"></div>
                         <br />
                         <!-- <span id="pruebaAudioArtista"></span> -->
@@ -702,6 +741,9 @@
                         <br />
                         <div id="imagenRetoArtista"></div>
                         <p id="mensaje1RetoArtista"><span id="spanRetoArtista">Te han retado a jugar al ahorcado con canciones de </span><span id="nombreRetoArtista"></span><span id="spanRetoArtista2"></span></p>
+                        <br />
+                        <p id="mensajeRetoConsiste">El reto consiste, como máximo, en 10 canciones de un mismo autor</p>
+                        <br />
                         <h4 id="preguntaAceptarReto">¿Aceptas el reto?</h4>
                         <div class="row">
                             <div class="col s6"><a id="botonAceptarRetoArtista" class="btn waves-effect waves-light">Aceptar</a></div>
@@ -722,23 +764,33 @@
         <div data-role="page" id="paginaFinRetoArtista">
             <div id="divFinRetoArtista">
                 <div id="bloqueFinRetoArtista">
-                    <div id="datosFinRetoArtista" class="container">
+                    <div id="datosFinRetoArtista" class="row">
                         <br />
-                        <div id="imagenFinRetoArtista"></div>
-                        <h5 id="mensajeFinRetoArtista">Fín del reto</h5>
-                        <p><span id="mensajeFRA1">Has acertado </span><span id="mensajeFRA2"></span></p>
-                        <span id="puntosExtraFRA">Obtienes </span><span id="puntosExtraFRA2"></span><span id="puntosExtraFRA3"> puntos extras</span>
-                        <br /><br />
+                        <div class="col s6">
+                            <div id="imagenFinRetoArtista"></div>
+                        </div>
+                        <div class="col s6">
+                            <h5 id="mensajeFinRetoArtista">Fín del reto</h5>
+                            <p><span id="mensajeFRA1">Has acertado </span><span id="mensajeFRA2"></span></p>
+                            <span id="puntosExtraFRA">Obtienes </span><span id="puntosExtraFRA2"></span><span id="puntosExtraFRA3"> puntos extras</span>
+                        </div>
+                        <br />
+                        <br />
+                        <br />
                     </div>
-                    <br />
                     <div id="capturarPantallaFinArtista" class="ui-body ui-body-a">
-                        <br />
-                        <div id="cuadroCapturaFinArtista" class="row">
-                            <div class="col s4">
-                                <a class="botonCaptura"><img src="images/compartir.png" width="50px" height="50px" alt="captura" /></a>
+                        <div class="row">
+                            <div class="col s6">
+                                <div id="cuadroCapturaFinArtista">
+                                    <p class="textoCaptura">Comparte y gana 10 puntos extras</p>
+                                    <a class="botonCaptura"><img src="images/compartir.png" width="50px" height="50px" alt="captura" /></a>
+                                </div>
                             </div>
-                            <div class="col s8">
-                                <span class="textoCaptura">Comparte esta pantalla con tus amigos y gana 10 puntos extras</span>
+                            <div class="col s6">
+                                <div id="divEscucharDeezer">
+                                    <p id="textoEscuchaDeezer">Escuchar este artista en Deezer</p>
+                                    <img id="escucharListaArtista" src="images/deezer.jpeg" width="95%" alt="Deezer" />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -746,6 +798,7 @@
                     <div id="opcionRetarArtista">
                         <br />
                         <h5 id="preguntarFinRetoArtista">¿Quieres retar a un amigo?</h5>
+                        <br />
                         <div class="row">
                             <div class="col s6"><a id="botonIrRetarArtista" class="btn waves-effect waves-light">Retar</a></div>
                             <div class="col s6"><a id="botonSalirFinRetoArtista" class="btn waves-effect waves-light">Salir</a></div>
@@ -797,36 +850,16 @@
     ################################################################################################################################################## -->
 
          <script type="text/javascript">
-            app.initialize();
-            centrarVerticalmente("#contenedor_cargando","#centrar_cargando");
             var idioma = navigator.language || navigator.userLanguage;
             var $idioma = idioma.substring(0,2);
             //$idioma = "en";
             if ($idioma != "es") {
                 traducir($idioma);
             }
-             /*
-            $idTrackReto = 0;
-            if (!$idTrackReto) {
-                $idTrackReto = 0;
-            }
-            $idArtistaReto = 0;
-            if (!$idArtistaReto) {
-                $idArtistaReto = 0;
-            }*/
+            centrarVerticalmenteInicio("#divInicio","#menuInicio");
+            app.initialize();
+            centrarVerticalmente("#contenedor_cargando","#centrar_cargando");
             $("#gifCargando").hide();
         </script>
-        <!--
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-          ga('create', 'UA-57072333-3', 'auto');
-          ga('send', 'pageview');
-
-        </script>
-        -->
     </body>
 </html>

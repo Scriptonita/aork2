@@ -1,84 +1,42 @@
-var isAppForeground = true;
+var admobid = {};
+if( /(android)/i.test(navigator.userAgent) ) {
+    admobid = { // for Android
+        banner: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+        interstitial: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY'
+    };
+} else if(/(ipod|iphone|ipad)/i.test(navigator.userAgent)) {
+    admobid = { // for iOS
+        banner: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+        interstitial: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY'
+    };
+} else {
+    admobid = { // for Windows Phone
+      banner: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY',
+      interstitial: 'ca-app-pub-XXXXXXXXXXXXXXXX/YYYYYYYYYY'
+    };
+}
 
-    function initAds() {
-      if (admob) {
-        var adPublisherIds = {
-          ios : {
-            banner : "ca-app-pub-11111111111111111/2222222222",
-            //interstitial : "ca-app-pub-11111111111111111/2222222222"
-          },
-          android : {
-            banner : "ca-app-pub-11111111111111111/2222222222",
-            interstitial : "ca-app-pub-11111111111111111/2222222222"
-          }
-        };
+if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {
+    document.addEventListener('deviceready', initApp, false);
+} else {
+    initApp();
+}
 
-        var admobid = (/(android)/i.test(navigator.userAgent)) ? adPublisherIds.android : adPublisherIds.ios;
+function initApp() {
+    if (! AdMob ) { alert( 'admob plugin not ready' ); return; }
+    console.log ("Iniciando Banners *********************");
+    AdMob.createBanner( {
+        adId: admobid.banner,
+        isTesting: false,
+        overlap: false,
+        offsetTopBar: false,
+        position: AdMob.AD_POSITION.BOTTOM_CENTER,
+        autoShow : true,
+        bgColor: 'dodgerblue'
+    } );
 
-        admob.setOptions({
-            publisherId:      admobid.banner,
-            autoShowInterstitial: false,
-          //interstitialAdId: admobid.interstitial,
-          //tappxIdiOs:       "/XXXXXXXXX/Pub-XXXX-iOS-IIII",
-          	tappxIdAndroid:   "/XXXXXXXXX/Pub-XXXX-iOS-IIII",
-          	tappxShare:       0.25,
-
-        });
-
-        registerAdEvents();
-
-      } else {
-        alert('AdMobAds plugin not ready');
-      }
-    }
-
-    function onAdLoaded(e) {
-      if (isAppForeground) {
-        if (e.adType === admob.AD_TYPE.INTERSTITIAL) {
-          console.log("An interstitial has been loaded and autoshown. If you want to load the interstitial first and show it later, set 'autoShowInterstitial: false' in admob.setOptions() and call 'admob.showInterstitialAd();' here");
-        } else if (e.adType === admob.AD_TYPE_BANNER) {
-          console.log("New banner received");
-        }
-      }
-    }
-
-    function onPause() {
-      if (isAppForeground) {
-        admob.destroyBannerView();
-        isAppForeground = false;
-      }
-    }
-
-    function onResume() {
-      if (!isAppForeground) {
-        setTimeout(admob.createBannerView, 1);
-        setTimeout(admob.requestInterstitialAd, 1);
-        isAppForeground = true;
-      }
-    }
-
-    // optional, in case respond to events
-    function registerAdEvents() {
-      document.addEventListener(admob.events.onAdLoaded, onAdLoaded);
-      document.addEventListener(admob.events.onAdFailedToLoad, function (e) {});
-      document.addEventListener(admob.events.onAdOpened, function (e) {});
-      document.addEventListener(admob.events.onAdClosed, function (e) {});
-      document.addEventListener(admob.events.onAdLeftApplication, function (e) {});
-      document.addEventListener(admob.events.onInAppPurchaseRequested, function (e) {});
-
-      document.addEventListener("pause", onPause, false);
-      document.addEventListener("resume", onResume, false);
-    }
-
-    function onDeviceReady() {
-      document.removeEventListener('deviceready', onDeviceReady, false);
-      initAds();
-
-      // display a banner at startup
-      admob.createBannerView();
-
-      // request an interstitial
-      admob.requestInterstitialAd();
-    }
-
-    document.addEventListener("deviceready", onDeviceReady, false);
+    AdMob.prepareInterstitial({
+        adId: admobid.interstitial,
+        autoShow: false
+    });
+}

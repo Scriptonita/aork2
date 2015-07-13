@@ -33,7 +33,8 @@ nav {
 
 
 #paginaCargando, #paginaInicio,  #paginaMenu, #paginaJuego, #paginaAcierto, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaFin, #paginaFinEstilo, #volverInicio, #pageInfo, #pageNoMas, #paginaAceptarArtista, #paginaFinRetoArtista, #paginaCaptura, #paginaLicencia {
-    background-image: url(../images/fondo.jpg);  
+    /*background-image: url(../images/fondo.jpg);  */
+    background-color: dodgerblue;
     background-size: cover;
     text-align: center;
 }
@@ -51,19 +52,60 @@ nav {
     margin-top: 3em !important;
 }
 
+#modosJuego{
+    font-size: 1.5em;
+    color: white;
+}
+
+#retoDiarioTexto {
+    font-size: 1.3em;
+    color: white;
+    text-align: right;
+}
+
+.textInicio{
+    color: white;
+}
+
 .botones_inicio {
+    width: 100%;
+    text-align: center;
+    color: white !important;
+    text-size: 1.2em !important;
+}
+
+.botones_inicio_2 {
     width: 100%;
     text-align: center;
     color: white !important;
 }
 
-#gracias {
-    font-size: 0.7em;
+#bloqueRetoDiario {
+    margin-bottom: 0px;
+    color: white;
 }
 
-#contenedorEstilos, #contenedorBotonesEstilo, #menuEstilos{    
+.proponeReto {
+    color: blue;
+}
+
+.noHayMas {
+    color: gray;
+}
+
+#iconosRedes{
+    color: black;
+}
+
+/*
+#aork2-facebook {
+    margin-left: 15px;
+}*/
+
+
+#contenedorEstilos, #contenedorBotonesEstilo, #menuEstilos{
     width: 100% !important;
-    text-align: center;    
+    text-align: center;
     margin-top: 3em !important;
 }
 
@@ -86,15 +128,19 @@ nav {
 #divDeezer{
     width: 85%;
     margin: auto;
-    background: rgba(255, 255, 255, 0.55); 
-    font-size: 1.6em;
-    color: white;
+    background: rgba(255, 255, 255, 0.55);
 }
 
 #logoDeezer {
     width: 90%;
     margin: auto;
 }
+
+#bloqueBase{
+    font-size: 1.2em;
+    color: white;
+}
+
 
 .laVida {
     font-size: 0.7em;
@@ -113,7 +159,7 @@ nav {
 .divAdivina {
     letter-spacing: 0.2em;
     color: white;
-    background: rgba(255, 255, 255, 0.55); 
+    background: rgba(255, 255, 255, 0.55);
     padding-top: 0.5em;
 }
 
@@ -136,7 +182,7 @@ nav {
 }
 
 #fondo, #fondoReto {
-    background-image: url(../images/6.png); 
+    background-image: url(../images/6.png);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
@@ -186,33 +232,33 @@ nav {
     background-color: #e7e892 !important;
     /*font-size: 1em !important;*/
     padding: 0.3em !important;
-    color: white !important;
-    background: rgba(255, 255, 255, 0.25) !important;    
+    color: lightgoldenrodyellow !important;
+    background: rgba(255, 255, 255, 0.25) !important;
 }
 
 .botonHome {
     background-color: #e7e892 !important;
     /*font-size: 1em !important;*/
     color: white !important;
-    background: rgba(255, 255, 255, 0.25) !important;    
+    background: rgba(255, 255, 255, 0.25) !important;
 }
 
 
 
 .pulsada {
     color: grey !important;
-    background: rgba(255, 255, 255, 0.45) !important;  
+    background: rgba(255, 255, 255, 0.65) !important;
 }
 
 #campoBuscarCancion {
     color: white;
 }
 
-#capturarPantalla, #divResultado, #divBusqueda, #finJuego, #contenedorEstiloFin, #resultadoLista, #centroVolver, #centroInfo, #centroNoMas, #divBuscarArtista, #datosRetoArtista, #datosFinRetoArtista, #resultadoBuscarArtista, #centroCaptura, #datosLicencia{
+#capturarPantalla, #divResultado, #divBusqueda, #finJuego, #contenedorEstiloFin, #resultadoLista, #centroVolver, #centroInfo, #centroNoMas, #divBuscarArtista, #datosRetoArtista, #datosFinRetoArtista, #centroCaptura, #datosLicencia, #mensajeSeleccion, #capturarPantallaFinSimple, #capturarPantallaFinEstilo, #capturarPantallaFinArtista, #opcionRetarArtista{
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    background: rgba(255, 255, 255, 0.55); 
+    background: rgba(255, 255, 255, 0.55);
     color: white;
 }
 
@@ -227,8 +273,16 @@ nav {
     width: 120%;
 }
 
-#resultadoLista, #resultadoBuscarArtista {
+#resultadoLista, #resultadoBuscarArtista, #listaBuscarArtista {
     width: 100%;
+}
+
+#nombreArtistaText {
+    font-size: 1.2em;
+}
+
+#retarArtistaText {
+    font-size: 0.7em;
 }
 
 .botonCancion {
@@ -237,20 +291,30 @@ nav {
     margin-right: auto;
 }
 
-.botonCanciones {    
+.botonCanciones {
     background-color: #F2F2F2;
 }
 
+/*
 #cabeceraJuego, #cabaceraReta, #cabeceraEstilos {
     font-size: large;
 }
-
+*/
 #mensajeSeleccion {
     width: 90%;
     text-align: center;
 }
 
+#mensajeRetoConsiste {
+    font-size: 0.8em;
+}
+
 #labelCajon, #labelBuscarArtista{
+    color: black;
+}
+
+
+#cajonBuscarArtista, #cajonBusqueda {
     color: black;
 }
 
@@ -262,25 +326,14 @@ nav {
     color: white;
 }
 
-#cajonBuscarArtista::-moz-input-placeholder {
-    color: white;
-}
-
-#cajonBusqueda::-moz-input-placeholder {
-    color: white;
-}
-
-#cajonBuscarArtista::input-placeholder {
-    color: white;
-}
-
-#cajonBusqueda::input-placeholder {
-    color: white;
-}
 
 
 #botonBuscarCancion, #botonBuscarArtista ,#botonLimpiarCancion, #botonSiguiente, #botonRetar, #botonVolverSi, #botonVolverNo, #botonInfoSalir, #botonInfoSeguir, #botonInfoRetar, #botonNoMasSalir, #botonNoMasReiniciar, #botonFinEstilos, #botonFin {
     color: white;
+}
+
+.botonHomeBajo {
+    color: white !important;
 }
 
 #botonAceptarRetoArtista, #botonSalirRetoArtista, #botonIrRetarArtista, #botonSalirFinRetoArtista {
@@ -295,8 +348,17 @@ nav {
     width: 100%;
 }
 
+#enlaceDeezer {
+    width: 100px;
+}
+
+#escucharCancion, #googlePlayText {
+    font-size: 0.7em;
+}
+
 .textoCapturaCanciones {
     font-size: 1.2em;
+    color: black;
 }
 
 .textoCaptura {
@@ -307,37 +369,16 @@ nav {
     margin-bottom: 0px;
 }
 
-/*
 #capturarPantalla{
     height: 55px;
 }
 
-#escucharCancion {
-    font-size: 0.7em;
-}
 
 #botonDeezer {
     color: black;
     background: rgba(255, 255, 255, 0.85);
     margin-bottom: 8px;
     height: 55px;
-}
-
-
-*/
-#escucharCancion {
-    /*font-size: 1.2em;*/
-}
-
-#botonDeezer {
-    color: black;
-    background: rgba(255, 255, 255, 0.85);
-    margin-bottom: 8px;
-    height: 120px;
-}
-
-#enlaceDeezer {
-    width: 100px;
 }
 
 #pubJuegoIndividual{
@@ -350,4 +391,8 @@ nav {
     width: 95% !important;
     text-align: center;
     margin: auto;
+}
+
+.enTourCSS {
+    color: black;
 }

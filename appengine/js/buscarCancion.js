@@ -153,20 +153,28 @@ function insertarReto (idTrack) {
             $.mobile.changePage("#paginaJuego",{});
         } else {
             alert ($idiomaSinCancion);
-            setTimeout($.mobile.changePage("/"), 10);
+            //setTimeout($.mobile.changePage("/"), 10);
+            setTimeout(window.open('http://aork2.com', '_self'),10); 
         }
       }); 
 }
 
-// Función que prepara la pantalla de juego y lo inicia.
-function iniciarReto() {
-    $(".botonLetra").show();
+
+function sumaUnReto() {
     $nReto = parseInt(localStorage.getItem("nReto"));
     if (!$nReto) {
         $nReto = 0;
     }
     $nReto++;
     localStorage.setItem("nReto", $nReto);
+
+}
+
+// Función que prepara la pantalla de juego y lo inicia.
+function iniciarReto() {    
+    $(".botonLetra").removeClass("pulsada");
+    $(".botonLetra").show();
+    sumaUnReto();
     $esReto = true;
     $aciertosReto = parseInt(localStorage.getItem("aciertosReto"));
     $titulo = $track.title;
@@ -190,6 +198,11 @@ function iniciarReto() {
     $("#adivina").html($aux);
 
     centrarVerticalmente("#divJuego","#bloqueJuego");
+    $hacerTourJuego = localStorage.getItem("tourJuego");
+    if (!$hacerTourJuego) {
+        tourJuego(); 
+        localStorage.setItem("tourJuego", true);         
+    }
     prepararPaginaAcierto();
 };
 
@@ -206,6 +219,15 @@ function comprobarReto () {
                 $deezerArtista = json.link;
                 $("#imagenRetoArtista").html("<a href='" + $deezerArtista + "'><img src='" + $imagenArtista + "' alt='imagen artista' /></a>");
                 $("#nombreRetoArtista").html(json.name);
+
+                //redireccionamos las imagenes de Deezer y Google Play ya que al entrar con dirección aork2.com/artista/xxx buscaría las imágenes en 
+                //aork2.com/artista/deezer.jpg y aork2.com/artista/Google_play.png
+
+                $("#enlaceDeezer").attr("src", "../images/deezer.jpeg");
+                $("#logoPlay").attr("src", "../images/Google_play2.png");
+                $("#escucharListaArtista").attr("src", "../images/deezer.jpeg");                
+                sumaUnReto();
+                $esRetoArtista = true;
                 centrarVerticalmente("#divAceptarArtista","#bloqueAceptarArtista");
                 $.mobile.changePage("#paginaAceptarArtista",{});                
             }
@@ -214,8 +236,14 @@ function comprobarReto () {
             }
         });
     } else {
+        obtenerRetosDiarios ();        
         centrarVerticalmente("#divInicio","#menuInicio");
         $.mobile.changePage("#paginaInicio",{}); 
+        $hacerTour = localStorage.getItem("tourPortada");
+        if (!$hacerTour) {
+            tourPortada();
+            localStorage.setItem("tourPortada", true);         
+        }
     }
 }
 

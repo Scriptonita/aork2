@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.aork2.app" version="1.0.0" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+<widget id="com.aork2.app" version="2.0.0" xmlns:gap="http://phonegap.com/ns/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 <!--<widget id="com.aork2.app" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">-->
     <name>aork2</name>
     <description>
@@ -9,6 +9,8 @@
         Aork2
     </author>
     <content src="index.html" />
+    <!-- <preference name='phonegap-version' value='cli-5.1.1' />-->
+    <!--<preference name='phonegap-version' value='3.6.3' /> PARA IOS -->
     <preference name="permissions" value="none" />
     <preference name="orientation" value="portrait" />
     <preference name="target-device" value="universal" />
@@ -16,28 +18,41 @@
     <preference name="webviewbounce" value="true" />
     <preference name="prerendered-icon" value="true" />
     <preference name="stay-in-webview" value="false" />
-    <preference name="ios-statusbarstyle" value="black-opaque" />
+    <preference name="ios-statusbarstyle" value="hide" /> <!-- Vigilar esto -->
     <preference name="detect-data-types" value="true" />
     <preference name="exit-on-suspend" value="false" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashScreenDelay" value="4000" />
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="9" />
+    <preference name="android-minSdkVersion" value="11" />
     <preference name="android-installLocation" value="auto" />
+    <!-- <gap:plugin name="org.apache.cordova.battery-status" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.camera" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.media-capture" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.console" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.contacts" /> -->
     <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.device-motion" />
     <gap:plugin name="org.apache.cordova.device-orientation" />
     <gap:plugin name="org.apache.cordova.dialogs" />
+    <!-- <gap:plugin name="org.apache.cordova.file" /> -->
+    <!-- <gap:plugin name="org.apache.cordova.file-transfer" /> -->
     <gap:plugin name="org.apache.cordova.geolocation" />
+    <!-- <gap:plugin name="org.apache.cordova.globalization" /> -->
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <gap:plugin name="org.apache.cordova.media" />
     <gap:plugin name="org.apache.cordova.network-information" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="nl.x-services.plugins.socialsharing" source="plugins.cordova.io" />
-    <gap:plugin name="com.admob.google" source="plugins.cordova.io" />
+    <gap:plugin name="nl.x-services.plugins.launchmyapp">
+      <param name="URL_SCHEME" value="http://aork2.com" />
+      <param name="URL_SCHEME" value="aork2" />
+    </gap:plugin>
+    <gap:plugin name="com.google.cordova.admob" source="plugins.cordova.io" />
     <gap:plugin name="com.phonegap.plugins.puship" version="1.0.0" source="plugins.cordova.io" />
-    <gap:plugin name="com.virtualartifacts.webintent" version="1.0.0" />
     <gap:plugin name="com.darktalker.cordova.screenshot" version="0.1.0" />
     <gap:plugin name="com.danielcwilson.plugins.googleanalytics" version="0.6.1" />
     <icon src="icon.png" />
@@ -54,10 +69,13 @@
     <icon gap:platform="webos" src="www/res/icon/webos/icon-64.png" />
     <icon gap:platform="winphone" src="www/res/icon/windows-phone/icon-48.png" />
     <icon gap:platform="winphone" gap:role="background" src="www/res/icon/windows-phone/icon-173-tile.png" />
+    <gap:splash src="screen.png"/>
+    <!--
     <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/res/screen/android/screen-ldpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/res/screen/android/screen-mdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/res/screen/android/screen-hdpi-portrait.png" />
     <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/res/screen/android/screen-xhdpi-portrait.png" />
+    -->
     <gap:splash gap:platform="blackberry" src="www/res/screen/blackberry/screen-225.png" />
     <gap:splash gap:platform="ios" height="480" src="www/res/screen/ios/screen-iphone-portrait.png" width="320" />
     <gap:splash gap:platform="ios" height="960" src="www/res/screen/ios/screen-iphone-portrait-2x.png" width="640" />
@@ -68,6 +86,11 @@
     <access origin="*" browserOnly="true"/>
     <!-- <access origin="*.devicepush.com"></access>-->
     <access origin="http://www.puship.cloudapp.net" />
+    <access origin="http://aork2.com" />
+
+    <gap:config-file platform="android" parent="/manifest/application">
+        <activity android:launchMode="singleTask" />
+    </gap:config-file>
 
     <gap:config-file platform="android" parent="/manifest/application/activity" mode="add">
         <intent-filter>
@@ -77,4 +100,24 @@
             <data android:host="aork2.com" android:scheme="http" />
         </intent-filter>
     </gap:config-file>
+<!--
+    <platform name="ios">
+      <config-file target="*-Info.plist" parent="CFBundleURLTypes">
+        <array>
+          <dict>
+            <dict>
+                <key>CFBundleURLName</key>
+                <string>aork2</string>
+                <key>CFBundleURLSchemes</key>
+                <array>
+                    <string>http</string>
+                </array>
+                <key>CFBundleURLIdentifier</key>
+                <string>aork2.com</string>
+            </dict>
+          </dict>
+        </array>
+      </config-file>
+    </platform>
+  -->
 </widget>

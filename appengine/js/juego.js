@@ -26,6 +26,8 @@ function obtenerCancion(json, indice){
     return $track;
 }
 
+
+
 // Prepara la pantalla de juego con la información de vida y puntos e inserta la cancioón.
 function iniciarJuego() {
     $(".botonLetra").removeClass("pulsada");
@@ -59,6 +61,11 @@ function iniciarJuego() {
         }
     }
     $("#adivina").html($aux);
+    $hacerTourJuego = localStorage.getItem("tourJuego");
+    if (!$hacerTourJuego) {
+        tourJuego();
+        localStorage.setItem("tourJuego", true);
+    }
 };
 
 // Comprueba en cada pulsación de letra si se encuentra en el título o no y actúa en consecuencia
@@ -125,11 +132,11 @@ function comprobarLetra (letra) {
 
 // Mientras estamos jugando, esta función prepara la página de acierto, descargando la imagen del artista, título de álbum, etc...
 function prepararPaginaAcierto() {
-    $("#imagenesAhorcado").html('<img id="imagen" src="/images/' + $vida + '.png" />');
+    $("#imagenesAhorcado").html('<img id="imagen" src="/images/' + $vida + '.png" class="responsive-img" alt="Autor" />');
     $("#tituloObjetivo").html($titulo);
-    $("#enlaceDeezer").attr("onclick", 'abrirEnlaceExterno("' + $track.link + '")');
+    $("#enlaceDeezer").attr("onclick", 'abrirEnlaceExterno("' + $track.link + '?app_id=158051")');
     if ($tipoJuego != "3") {
-        $("#imagenAutor").html("<img src='" + $track.artist.picture + "' />");
+        $("#imagenAutor").html("<img src='" + $track.artist.picture + "' class='responsive-img' alt='Autor' />");
     }
     $("#autor").html($track.artist.name);
     $("#album").html($track.album.title);
@@ -169,7 +176,13 @@ function haciaPaginaAcierto() {
             );
         $adsActivo = true;
     }
+    centrarVerticalmente("#divExito", "#bloqueExito");
     $.mobile.changePage("#paginaAcierto",{transition: "flip"});
+    $hacerTour = localStorage.getItem("tourAcierto");
+    if (!$hacerTour) {
+        tourAcierto();
+        localStorage.setItem("tourAcierto", true);
+    }
 }
 
 // Prepara la página de juego en el modo estilos
