@@ -12,12 +12,19 @@ handlers:
 - url: /images
   static_dir: images
 
+- url: /audios
+  static_dir: audios
+
 - url: /stylesheets
   static_dir: stylesheets
 
 - url: /js
   mime_type: font/truetype
   static_dir: js
+
+- url: /font
+  mime_type: font/truetype
+  static_dir: font
 
 - url: /font/roboto
   mime_type: font/truetype

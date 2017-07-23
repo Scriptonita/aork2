@@ -17,6 +17,118 @@
  * under the License.
  */
 
+ /* PALETE DE COLORES
+
+ #1E90FF DODGER BLUE
+ #086788 SEA BLUE
+ #F0C808 YELLOW (MUNSELL)
+ #FFF1D0 PAPAYA WHIP
+ #DD1C1A MAXIMUM RED
+
+ */
+
+ @font-face
+{
+   font-family: Gabrielle;
+   src: url("/font/Gabrielle.ttf") format("truetype")
+}
+
+@font-face
+  {
+     font-family: Quenda;
+     src: url("/font/Quenda-Medium.otf");
+  }
+
+ @media (max-width: 600px) {
+   .texto_nivel_inicio {
+         color: black;
+         font-family: Gabrielle;
+         font-size: 2.5vw;
+   }
+   .texto_fin_nivel {
+     color: black;
+     font-family: Gabrielle;
+     font-size: 2em;
+   }
+   #paginaCargando, #paginaInicio, #paginaMenu, #paginaNiveles, #paginaJuego, #paginaAcierto, #paginaFinRetoArtista, #paginaAceptarArtista, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaNiveles, #volverInicio, #pageInfo, #paginaCaptura, #paginaLicencia, #pageNoMasNiveles {
+       background-color: #1E90FF;
+       text-align: center;
+   }
+}
+
+@media (min-width: 600px) and (max-width: 1080px) {
+  .texto_nivel_inicio {
+        color: black;
+        font-family: Gabrielle;
+        font-size: 1.1em;
+  }
+  .texto_fin_nivel {
+    color: black;
+    font-family: Gabrielle;
+    font-size: 4.5em;
+  }
+  #paginaCargando, #paginaInicio, #paginaMenu, #paginaNiveles, #paginaJuego, #paginaAcierto, #paginaFinRetoArtista, #paginaAceptarArtista, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaNiveles, #volverInicio, #pageInfo, #paginaCaptura, #paginaLicencia, #pageNoMasNiveles  {
+    background-color: #086788;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1080px) and (max-width: 1450px) {
+  .texto_nivel_inicio {
+        color: black;
+        font-family: Gabrielle;
+        font-size: 1.4em;
+  }
+  .texto_fin_nivel {
+    color: black;
+    font-family: Gabrielle;
+    font-size: 4.7em;
+  }
+  #paginaCargando, #paginaInicio, #paginaMenu, #paginaNiveles, #paginaJuego, #paginaAcierto, #paginaFinRetoArtista, #paginaAceptarArtista, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaNiveles, #volverInicio, #pageInfo, #paginaCaptura, #paginaLicencia, #pageNoMasNiveles  {
+    background-color: #086788;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1450px) {
+  .texto_nivel_inicio {
+        color: black;
+        font-family: Gabrielle;
+        font-size: 1.7em;
+  }
+  .texto_fin_nivel {
+    color: black;
+    font-family: Gabrielle;
+    font-size: 5em;
+  }
+  #paginaCargando, #paginaInicio, #paginaMenu, #paginaNiveles, #paginaJuego, #paginaAcierto, #paginaFinRetoArtista, #paginaAceptarArtista, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaNiveles, #volverInicio, #pageInfo, #paginaCaptura, #paginaLicencia, #pageNoMasNiveles  {
+    background-color: #086788;
+    text-align: center;
+  }
+}
+
+html {
+  font-family: Quenda;
+  font-style: normal !important;
+}
+
+audio {
+  font-size: 3em!important;
+}
+
+#tour_dialog {
+  text-align: center;
+  max-width: 90%;
+}
+
+.ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper {
+  text-shadow: none !important;
+}
+
+#adivina, #bloqueVida, #bloquePuntos {
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
 
 #centrar_cargando {
     color: white;
@@ -26,18 +138,158 @@
     margin: auto;
 }
 
+.texto_gabrielle {
+  font-family: Gabrielle;
+}
+
 
 nav {
     height: 3em;
 }
 
+#containerPaginaInicio, #containerPaginaNiveles, #containerJuego, #containerPaginaAcierto, #divEstilos, #divVolver, #divInfo {
+    background-color: #1E90FF;
+}
 
-#paginaCargando, #paginaInicio,  #paginaMenu, #paginaJuego, #paginaAcierto, #paginaBuscarArtista ,#paginaCrear, #paginaReto, #paginaEstilos, #paginaFin, #paginaFinEstilo, #volverInicio, #pageInfo, #pageNoMas, #paginaAceptarArtista, #paginaFinRetoArtista, #paginaCaptura, #paginaLicencia {
-    /*background-image: url(../images/fondo.jpg);  */
-    background-color: dodgerblue;
+#centrarPaginaAcierto {
+  width: 100%;
+  margin: auto;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background-color: #FFF1D0;
+}
+
+#bloque1 {
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+#bloque2 {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+#bloque3 {
+    padding-left: 0;
+    padding-right: 40px;
+    padding-top: 15px;
+    padding-bottom: 0;
+    border-radius: 0 0 2px 2px;
+}
+
+#textoSeleccion {
+  margin-left: 15px
+}
+
+.relative {
+  position: relative;
+}
+
+
+#divInicio {
+  width: 100%;
+}
+
+
+.candado_nivel_solitario {
+  height: 90%;
+  width: 80%;
+}
+
+.escenario_inicio {
+  width: 80%;
+}
+
+#burbuja {
+  background-image: url("/images/nube.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+#durmiendo {
+
+    background-image: url("/images/acostado.png");
+    background-repeat: no-repeat;
     background-size: cover;
+    background-position: left;
+    height: 100%;
+}
+
+.nivel_desbloqueado {
+  background-image: url("/images/nivel_abierto.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+}
+
+.nivel_bloqueado {
+  background-image: url("/images/nivel_cerrado.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+.candado {
+}
+
+.datos_nivel {
+  text-align: left;
+}
+
+
+
+#paginaCrear {
+  color: black !important;
+}
+
+#paginaAceptarArtista {
+  text-align: left;
+  color: white;
+}
+
+
+#datosFinRetoArtista, #paginaFinEstilo {
+    background-image: url(../images/finArtista.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-color: black;
     text-align: center;
 }
+
+#datosFinRetoArtista {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: none !important;
+    color: black !important;
+}
+
+
+#botonSeleccionAcabada {
+  width: 50%;
+  margin: auto;
+}
+
+#pageNoMas, #paginaFin {
+  background-image: url(../images/finNivel.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-color: black;
+  text-align: center;
+}
+
 
 .valign {
     width: 100% !important;
@@ -47,9 +299,49 @@ nav {
     text-align: center;
 }
 
+.central {
+  margin-bottom: 0px;
+}
+
+
+#divAuxiliar {
+    height: 50px;
+}
+
 #menuInicio {
     width: 100% !important;
-    margin-top: 3em !important;
+}
+
+#botonesInicio, .indicaNivel {
+    font-family: Gabrielle;
+    font-size: x-large;
+}
+
+.avion1 {
+  animation: vuelo1 5s linear infinite;
+}
+
+@keyframes vuelo1 {
+
+    0% {
+      transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(-100px);
+    }
+}
+
+.avion2 {
+  animation: vuelo2 5s linear infinite;
+}
+
+@keyframes vuelo2 {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+      transform: translateX(200px);
+  }
 }
 
 #modosJuego{
@@ -64,14 +356,15 @@ nav {
 }
 
 .textInicio{
-    color: white;
+    color: black;
+    font-family: Gabrielle;
+    font-size: x-large;
 }
 
 .botones_inicio {
     width: 100%;
     text-align: center;
-    color: white !important;
-    text-size: 1.2em !important;
+    font-size: 1.2em;
 }
 
 .botones_inicio_2 {
@@ -80,9 +373,29 @@ nav {
     color: white !important;
 }
 
-#bloqueRetoDiario {
-    margin-bottom: 0px;
-    color: white;
+#retosAork2 {
+    /*margin-bottom: 0px;*/
+    color: black;
+    border-style: double;
+    border-color: dodgerblue;
+    /*background-image: url(/images/tv2.png);
+    background-size: 100% 100%;*/
+}
+
+/*
+#botonRetoDiario {
+  width:100%;
+  height: 100%;
+}
+*/
+
+#imgRetoDiario {
+  background-image: url(/images/cover.jpg);
+  background-repeat: no-repeat;
+  background-size: 85% 85%;
+  background-position: center center;
+  background-origin: content-box;
+  background-color: white;
 }
 
 .proponeReto {
@@ -103,37 +416,44 @@ nav {
 }*/
 
 
-#contenedorEstilos, #contenedorBotonesEstilo, #menuEstilos{
+#contenedorEstilos{
     width: 100% !important;
     text-align: center;
-    margin-top: 3em !important;
+}
+
+#contenedorBotonesEstilo {
+  width: 70% !important;
+  text-align: center;
 }
 
 #mensajeSeleccion {
     margin: auto;
 }
 
-.botonEstilo {
+/*
+.botonEstilo_ {
     width: 100% !important;
     text-align: center;
     color: white !important;
     font-size: 0.7em !important;
 }
-
+*/
 .centrar{
     margin: auto;
 }
 
 
-#divDeezer{
-    width: 85%;
+#promo{
     margin: auto;
-    background: rgba(255, 255, 255, 0.55);
 }
 
-#logoDeezer {
-    width: 90%;
-    margin: auto;
+#imgPromo {
+    width: 100%;
+    /*
+    border-width: 3px;
+    border-style: solid;
+    border-color: black;
+    */
 }
 
 #bloqueBase{
@@ -147,6 +467,7 @@ nav {
     text-align: left;
     color: black;
     padding-left: 1em;
+    margin-top: 1em;
 }
 
 .losPuntos {
@@ -154,9 +475,14 @@ nav {
     text-align: right;
     color: black;
     padding-right: 1em;
+    margin-top: 1em;
 }
 
-.divAdivina {
+#datosJuego {
+  margin-bottom: 1em;
+}
+
+.divAdivinalo {
     letter-spacing: 0.2em;
     color: white;
     background: rgba(255, 255, 255, 0.55);
@@ -165,20 +491,20 @@ nav {
 
 #containerAdivina, #containerAdivinaReto {
     width: 100% !important;
+    margin-bottom: 0px;
 }
 
 .mensajeAdivina{
     font-size: 0.7em !important;
     line-height:10px;
+    color: #086788;
 }
 
-#insertarAudio {
-    width: 90% !important;
-    margin: auto !important;
-}
 
 #adivina, #adivinaReto {
     font-size: 1.3em !important;
+    color: black!important;
+    letter-spacing: 2px;
 }
 
 #fondo, #fondoReto {
@@ -186,7 +512,7 @@ nav {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
-    height: 100%;
+    height: 90%;
 }
 
 #bloque{
@@ -202,7 +528,7 @@ nav {
 
 #tituloObjetivo {
     font-size: large;
-    color: red;
+    color: #086788;
     margin-bottom: 5px;
 }
 
@@ -212,6 +538,8 @@ nav {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
 }
 
 #imagen {
@@ -228,40 +556,70 @@ nav {
 }
 
 
-.botonLetra, .botonAyuda {
+.botonLetra, .botonAyuda, .botonHome {
     background-color: #e7e892 !important;
     /*font-size: 1em !important;*/
     padding: 0.3em !important;
-    color: lightgoldenrodyellow !important;
+    color: #086788 !important;
     background: rgba(255, 255, 255, 0.25) !important;
+    text-shadow: none !important;
 }
-
-.botonHome {
-    background-color: #e7e892 !important;
-    /*font-size: 1em !important;*/
-    color: white !important;
-    background: rgba(255, 255, 255, 0.25) !important;
-}
-
 
 
 .pulsada {
-    color: grey !important;
-    background: rgba(255, 255, 255, 0.65) !important;
+    /*color: grey !important;*/
+    background-color: rgba(150, 150, 150, 0.5) !important;
+    text-shadow: none !important;
 }
+
+.pulsadaOk {
+  color: #086788 !important;
+}
+
+.pulsadaKo {
+  color: #DD1C1A !important;
+}
+
 
 #campoBuscarCancion {
     color: white;
 }
 
-#capturarPantalla, #divResultado, #divBusqueda, #finJuego, #contenedorEstiloFin, #resultadoLista, #centroVolver, #centroInfo, #centroNoMas, #divBuscarArtista, #datosRetoArtista, #datosFinRetoArtista, #centroCaptura, #datosLicencia, #mensajeSeleccion, #capturarPantallaFinSimple, #capturarPantallaFinEstilo, #capturarPantallaFinArtista, #opcionRetarArtista{
+#capturarPantalla, #finJuego, #contenedorEstiloFin, #centroNoMas, #centroCaptura, #datosLicencia, #capturarPantallaFinSimple, #capturarPantallaFinEstilo, #capturarPantallaFinArtista {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
     background: rgba(255, 255, 255, 0.55);
     color: white;
+    text-shadow: none !important;
 }
 
+#divResultado {
+
+}
+#centroNoMas {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(255, 255, 255, 0.30);
+  text-shadow: none !important;
+  color: black !important;
+}
+
+#datosRetoArtista {
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+
+
+#contenedorEstiloFin {
+  color: black;
+}
+
+#bloqueFinRetoArtista, #capturarPantallaFinArtista, #capturarPantallaFinEstilo, #divBuscarArtista{
+  color: black !important;
+}
 
 #noticias {
     font-size: 0.8em;
@@ -273,12 +631,38 @@ nav {
     width: 120%;
 }
 
+
+.card-artista {
+  font-size: 1em;
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.65);
+  text-shadow: none !important;
+}
+
+.card-artista-lg {
+  font-size: 1.5em;
+  text-align: left;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.65);
+  text-shadow: none !important;
+}
+
 #resultadoLista, #resultadoBuscarArtista, #listaBuscarArtista {
     width: 100%;
 }
 
-#nombreArtistaText {
-    font-size: 1.2em;
+.nombreArtistaText {
+    margin-left: 5px;
+}
+
+.nombreCancionText {
+    margin-left: 5px;
+    font-size: 1.5em;
 }
 
 #retarArtistaText {
@@ -313,22 +697,22 @@ nav {
     color: black;
 }
 
+#explicacionBuscarArtista {
 
-#cajonBuscarArtista, #cajonBusqueda {
-    color: black;
 }
 
-#cajonBuscarArtista::-webkit-input-placeholder {
-    color: white;
-}
-
-#cajonBusqueda::-webkit-input-placeholder {
-    color: white;
+#campoBusquedaArtista, .sinMargenAbajo {
+  margin-bottom: 0px;
 }
 
 
+#cajonBuscarArtista::-webkit-input-placeholder, #cajonBusqueda::-webkit-input-placeholder {
+    color: gray;
+    margin: 10px;
+}
 
-#botonBuscarCancion, #botonBuscarArtista ,#botonLimpiarCancion, #botonSiguiente, #botonRetar, #botonVolverSi, #botonVolverNo, #botonInfoSalir, #botonInfoSeguir, #botonInfoRetar, #botonNoMasSalir, #botonNoMasReiniciar, #botonFinEstilos, #botonFin {
+
+#botonInfoRetar, #botonNoMasSalir, #botonNoMasReiniciar, #botonFinEstilos, #botonFin {
     color: white;
 }
 
@@ -336,7 +720,7 @@ nav {
     color: white !important;
 }
 
-#botonAceptarRetoArtista, #botonSalirRetoArtista, #botonIrRetarArtista, #botonSalirFinRetoArtista {
+#botonAceptarRetoArtista, #botonSalirRetoArtista, #botonNoEsCancion {
     color: white;
 }
 
@@ -344,29 +728,34 @@ nav {
     color: white;
 }
 
-#imagenAutor{
-    width: 100%;
+#botonesPersonajes {
+  margin-bottom: 0px;
 }
-
-#enlaceDeezer {
-    width: 100px;
-}
-
 #escucharCancion, #googlePlayText {
     font-size: 0.7em;
 }
 
+#datosCancion {
+  padding-top: 10px;
+  padding-bottom: 0px;
+}
+
 .textoCapturaCanciones {
-    font-size: 1.2em;
+    font-size: 1em;
     color: black;
 }
 
-.textoCaptura {
-    font-size: 0.7em;
+.textoCaptura, #textoEscuchaDeezer {
+    font-size: 1.2em;
+    color: red;
 }
 
 #cuadroCaptura, #cuadroCapturaFinSimple, #cuadroCapturaFinEstilo, #cuadroCapturaFinArtista {
     margin-bottom: 0px;
+}
+
+#paginaFinEstilo {
+  color: black !important;
 }
 
 #capturarPantalla{
@@ -396,3 +785,79 @@ nav {
 .enTourCSS {
     color: black;
 }
+
+#insertarAudio {
+    width: 90% !important;
+    margin: auto !important;
+}
+
+/*
+#adivina {
+  color: red !important;
+}
+*/
+
+#adivina, #indicadorVida, #indicadorPuntos {
+  font-family: Trebuchet;
+  font-style: normal !important;
+}
+
+#indicadorVida {
+  color: black;
+}
+
+#escenaAhorcado {
+
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+}
+
+#fondoImagenAhorcado {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  border-radius: 5px;
+  padding-bottom: 0px;
+  margin-top: 5px;
+  margin-bottom: 0px;
+}
+
+#ahorcado {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#textoEscucharArtista {
+  color: black !important;
+}
+
+#finMensaje1 {
+  font-size: 1.4em;
+}
+/*
+.collection-item {
+    background-color: #efefff;
+}
+*/
+
+.reducido50 {
+  width: 50% !important;
+}
+
+.reducido80 {
+  width: 80%;
+}
+
+.al100 {
+  width: 100% !important;
+}
+
+.st_sharethis_custom{
+	background: url(../images/compartir_80.jpg) no-repeat scroll left top transparent;
+	padding:0px 16px 0 0;
+}
+
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }

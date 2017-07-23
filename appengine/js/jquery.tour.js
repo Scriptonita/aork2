@@ -18,18 +18,23 @@
             funnelID: "tourV1", // we'll pass this to Mixpanel to segement on and guage future funnel improvment
 
             init: function () {
-                $('body').prepend('<div id="tour_mask"></div><div id="tour_dialog"><div class="arrow top"></div><div class="msg"></div></div>');
+                $('body').prepend('<div id="tour_mask"><img id="cerrarTour" src="/images/close-button.svg" width="20px" height="20px" /></div><div id="tour_dialog"><div class="arrow top"></div><div class="msg"></div></div>');
                 this.showStep();
                 $enTour = true;
                 $("#adivina").addClass("enTourCSS");
                 $(".botonLetra").addClass("enTourCSS");
-                $("#retoPosterior").addClass("enTourCSS");                
+                $("#retoPosterior").addClass("enTourCSS");
             },
 
             // increment steps or pause if we're waiting on a trigger to advance
             nextStep: function () {
                 var latent = TourSteps[this.startFrom].waitForTrigger; // should we proceed?
                 this.startFrom += 1;
+                if ($salirTour) {
+                  $salirTour = false;
+                  console.log ("Paso por aqui");
+                  this.startFrom = TourSteps.length;
+                }
                 this[this.startFrom < TourSteps.length && !latent ? 'showStep' : 'tourComplete']();
             },
 
@@ -182,12 +187,16 @@
             // Check to see if the next action was clicked to advance the tour (nextSelector)
             tourClickHandler: function (e) {
                 var nextSel = TourSteps[e.data.stop].nextSelector;
-                if (nextSel) { // we only proceed when THIS selector is clicked i.e. #ok_button
-                    if ($(e.currentTarget).is(nextSel) || $(nextSel).find(e.currentTarget).length > 0) {
-                        Tour.stepComplete();
-                    }
-                } else { // no next selector specified. Any click or action will continue the tour
-                    Tour.stepComplete();
+                if (this.id == "cerrarTour") {
+                  $salirTour = true;
+                } else {
+                  if (nextSel) { // we only proceed when THIS selector is clicked i.e. #ok_button
+                      if ($(e.currentTarget).is(nextSel) || $(nextSel).find(e.currentTarget).length > 0) {
+                          Tour.stepComplete();
+                      }
+                  } else { // no next selector specified. Any click or action will continue the tour
+                      Tour.stepComplete();
+                  }
                 }
             }
         };

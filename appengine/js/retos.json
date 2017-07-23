@@ -1,5 +1,355 @@
 {
     "data" : [
+      {
+                "id": "149289",
+                "artista": "Medina Azahara",
+                "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+            },
+      {
+                "id": "1055",
+                "artista": "Luz Casal",
+                "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+            },
+      {
+                "id": "693",
+                "artista": "Incubus",
+                "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+            },
+      {
+                "id": "1079668",
+                "artista": "Toto",
+                "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+            },
+    {
+              "id": "412332",
+              "artista": "Matt Simons",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "8999000",
+              "artista": "Furious Monkey House",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "4476566",
+              "artista": "Pablo López",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "1181430",
+              "artista": "Meghan Trainor",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "4993",
+              "artista": "Fangoria",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "542",
+              "artista": "David Guetta",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "626",
+              "artista": "The Corrs",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "927",
+              "artista": "Oasis",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "743",
+              "artista": "Blur",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "368",
+              "artista": "Sting",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "1981",
+              "artista": "The Police",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "10782",
+              "artista": "Seguridad Social",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "882",
+              "artista": "The Offspring",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "196",
+              "artista": "The Cranberries",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "1866",
+              "artista": "Joe Cocker",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "3212",
+              "artista": "Enrique Bunbury",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "170",
+              "artista": "Bryam Adams",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "189",
+              "artista": "Lenny Kravitz",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+	{
+              "id": "133741",
+              "artista": "José Luis Perales",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+	{
+              "id": "192",
+              "artista": "Eric Clapton",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "617",
+              "artista": "Frank Sinatra",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "2059",
+              "artista": "Aretha Franklin",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "280908",
+              "artista": "Consuelo",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "35",
+              "artista": "Avril Lavigne",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "808",
+              "artista": "Bob Dylan",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "848",
+              "artista": "Led Zeppelin",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "70",
+              "artista": "Juanes",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "4477",
+              "artista": "Julieta Venegas",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "65072",
+              "artista": "Huecco",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "10742",
+              "artista": "Edurne",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+              "id": "342867",
+              "artista": "Los Atlándticos",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "6",
+              "artista": "Manu Chao",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "77920",
+              "artista": "Carlos Cano",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "413",
+              "artista": "Elton John",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "196856",
+              "artista": "Rod Steward",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "429675",
+              "artista": "Bruno Mars",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "564",
+              "artista": "Rihanna",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+      {
+              "id": "566",
+              "artista": "Foo Fighters",
+              "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+          },
+    {
+            "id": "67",
+            "artista": "Kiss",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "266678",
+            "artista": "Albertucho",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "892",
+            "artista": "Coldplay",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "75798",
+            "artista": "Adele",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "1021232",
+            "artista": "Efecto Pasillo",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "27",
+            "artista": "Daft Punk",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+    {
+            "id": "1465",
+            "artista": "Mónica Naranjo",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+	{
+            "id": "3469",
+            "artista": "Sia",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+	{
+            "id": "391564",
+            "artista": "Pimpinela",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+	{
+            "id": "2402",
+            "artista": "Enigma",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+	{
+            "id": "6135",
+            "artista": "Platero y Tú",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+	{
+            "id": "663",
+            "artista": "Guns N' Roses",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "997",
+            "artista": "David Bowie",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "4668720",
+            "artista": "Langui",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "2996",
+            "artista": "Motorhead",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "2446",
+            "artista": "Amaral",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "5639499",
+            "artista": "Gemeliers",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "4474",
+            "artista": "Estopa",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "4115",
+            "artista": "Maná",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "80087",
+            "artista": "Poncho K",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "65007",
+            "artista": "Pastora Soler",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "81127",
+            "artista": "Manuel Carrasco",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "281011",
+            "artista": "India Martínez",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "1582728",
+            "artista": "Leiva",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "3289",
+            "artista": "Serrat",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "4940",
+            "artista": "Joaquín Sabina",
+            "propone": "Por <span class='proponeReto' onclick='window.open(\"http://twitter.com/_aork2_\", \"_blank\");'>@_aork2_</span>"
+        },
+        {
+            "id": "1332568",
+            "artista": "Mario Díaz",
+            "propone": "Dedicado a <span class='proponeReto' onclick='window.open(\"http://alrumbofestival.com/\", \"_blank\");'>Festival ALRUMBO</span>"
+        },
+        {
+            "id": "131537",
+            "artista": "Eskorzo",
+            "propone": "Dedicado a <span class='proponeReto' onclick='window.open(\"http://alrumbofestival.com/\", \"_blank\");'>Festival ALRUMBO</span>"
+        },
         {
             "id": "2323",
             "artista": "Gentleman",

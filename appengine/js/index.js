@@ -30,22 +30,22 @@ function examinarPush (texto) {
     }
     if (typeof aux[3] == "undefined") {
         centrarVerticalmente("#divInicio","#menuInicio");
-        $.mobile.changePage("#paginaInicio",{}); 
+        $.mobile.changePage("#paginaInicio",{});
     } else if (aux[3] == "artista") {
         $idArtistaReto = aux[4];
         comprobarReto();
     } else if (aux[3] != "") {
         $idTrackReto = aux[3];
         comprobarReto();
-    }  
+    }
 }
 
 // Para evitar errores al darle al botón de retroceso que nos podría llevar a pantallas de las que ya se han borrado los datos.
 function handleBackButton() {
     if ($.mobile.activePage.attr('id') == 'paginaInicio') {
         navigator.app.exitApp();
-    } else if ($.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaAcierto' || $.mobile.activePage.attr('id') == 'paginaFin' 
-              || $.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaCrear' || $.mobile.activePage.attr('id') == 'paginaBuscarArtista' 
+    } else if ($.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaAcierto' || $.mobile.activePage.attr('id') == 'paginaFin'
+              || $.mobile.activePage.attr('id') == 'paginaEstilos' || $.mobile.activePage.attr('id') == 'paginaCrear' || $.mobile.activePage.attr('id') == 'paginaBuscarArtista'
               || $.mobile.activePage.attr('id') == 'paginaAceptarArtista' || $.mobile.activePage.attr('id') == 'paginaFinRetoArtista' ){
         $.mobile.changePage('#paginaInicio');
     }else{
@@ -67,7 +67,7 @@ function onOffline() {
         );
         $advOffline = true;
     }
-    
+
 }
 
 
@@ -91,40 +91,40 @@ var app = {
         console.log("Entra a DeviceReady");
         app.receivedEvent('deviceready');
         $aInicio = true;
-        
+
         // Registro de dispositivo en DevicePush
         devicePush.register({
-            idUser: 'XXXXXXXXXXXXXXXXXXXX', // Tu ID de usuario en Device Push
+            idUser: '550d26d41cc5ad907fb6bc86', // Tu ID de usuario en Device Push
             //idApplication: 'bc44-9d4d-25cb-a738' // El ID de aplicación en Device Push
-            idApplication: 'AAAA-BBBB-CCCC-DDDD' // El ID de aplicación en Device Push
-        }); 
-        
-        
-        // Cuando se recibe una notificación por mensaje Push  
+            idApplication: '6638-8f4b-4d4e-9e83' // El ID de aplicación en Device Push
+        });
+
+
+        // Cuando se recibe una notificación por mensaje Push
         devicePush.notificationReceived(function(textNotification) {
             var texto = textNotification;
-            examinarPush (texto); 
+            examinarPush (texto);
             $aInicio = false;
         });
-        
+
         window.plugins.webintent.getUri(function(url) {
             if(url !== "" && url !== null) {
             // url is the url the intent was launched with
                 console.log("Se ha obtenido una URL: "+ url);
                 examinarPush (url);
             }
-        }); 
-        
+        });
+
         document.removeEventListener('deviceready', onDeviceReady, false);
-        admob.createBannerView({publisherId: "pub-XXXXXXXXXXXXXXX", interstitialAdId: "ca-app-pub-XXXXXXXXXXXXXXX/YYYYYYYYYY"}); 
-       
+        admob.createBannerView({publisherId: "pub-1275195378669643", interstitialAdId: "ca-app-pub-1275195378669643/2525777036"});
+
         document.addEventListener("deviceready", onDeviceReady, false);
         document.addEventListener("backbutton", handleBackButton, true);
         document.addEventListener("offline", onOffline, false);
-        
+
         if ($aInicio) {
             console.log("Hacia pagina de inicio");
-            centrarVerticalmente("#divInicio","#menuInicio");        
+            centrarVerticalmente("#divInicio","#menuInicio");
             $.mobile.changePage("#paginaInicio",{});
         }
     },

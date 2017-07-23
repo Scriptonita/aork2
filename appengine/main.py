@@ -22,7 +22,7 @@ import jinja2
 
 class MainHandler(webapp2.RequestHandler):
     def get(self, idTrack=""):
-		 
+
 		idArtista = 0
 		if idTrack == "":
 			idTrack = 0
@@ -49,14 +49,22 @@ class ArtistaHandler(webapp2.RequestHandler):
 
 		template = jinja_environment.get_template('index.html')
 		self.response.out.write(template.render(template_values))
-		
+
+class CheckHandler(webapp2.RequestHandler):
+    def get(self):
+        template_values = {}
+
+        template = jinja_environment.get_template('check_aork2.html')
+        self.response.out.write(template.render(template_values))
+
 
 jinja_environment = jinja2.Environment(autoescape=False,
     loader=jinja2.FileSystemLoader(os.path.join(os.path.dirname(__file__), 'templates')))
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
+    ('/check/', CheckHandler),
 	('/([^/]+)', MainHandler),
 	('/artista/', ArtistaHandler),
-	('/artista/([^/]+)', ArtistaHandler)], 
+	('/artista/([^/]+)', ArtistaHandler)],
     debug=True)

@@ -1,9 +1,11 @@
+$todas= null;
 $aciertos = 0;
 $aciertosReto = 0;
 $indice = 0;
 $vida = 6;
 $advOffline = false;
 $adsActivo = false;
+$salirTour = false;
 $mensajeErrorConexion = 'Todas las canciones del juego se reproducen en streaming desde Deezer. Es imposible jugar sin conexión.';
 $noConexion = "¡¡Lo siento!! No tienes conexión";
 $puntos = parseInt(localStorage.getItem("puntos"));
@@ -11,10 +13,14 @@ if (isNaN($puntos)) {
   $puntos = 0;
   localStorage.setItem("puntos", $puntos);
 }
+
 $esReto = false;
 $esRetoArtista = false;
 $ads = false;
 $tipoJuego = "1";
+$idioma = "";
+$tituloCancion = "Título de la canción";
+$autorCancion = "Autor de la canción";
 $enhorabuena = "¡¡Enhorabuena!!";
 $hasFallado = "Lo siento, has fallado";
 $idiomaPuntos = "Puntos";
@@ -41,8 +47,11 @@ $compartirTitleTelegramArt = "¿Aceptas el reto? Acierta las canciones de este a
 
 $compartirCaptura = "Jugando al aork2";
 
-$enTour = false;
+$enlacePromo = "http://www.scriptonita.com";
 
+$enTour = false;
+$msg1_esp = "";
+/*
 $estilos = {
   data: [
     {
@@ -104,7 +113,7 @@ $estilos = {
       "id": "32",
       "name": "Europa",
       "type": "genre"
-    },    
+    },
     {
       "id": "129",
       "name": "Jazz",
@@ -121,8 +130,4 @@ $estilos = {
       "type": "genre"
     }
 ]}
-
-
-
-
-
+*/

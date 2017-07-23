@@ -1,0 +1,723 @@
+{
+  "tracks": {
+    "data": [
+      {
+        "id": "70031592",
+        "readable": false,
+        "title": "I Wish I Knew How It Would Feel to Be Free",
+        "title_short": "I Wish I Knew How It Would Feel to Be Free",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/70031592",
+        "duration": "188",
+        "rank": "451320",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-d.deezer.com/stream/dfea7ccea6d42c88cd15959e25a539e6-0.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "744",
+          "name": "Nina Simone",
+          "link": "http://www.deezer.com/artist/744",
+          "tracklist": "https://api.deezer.com/artist/744/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "6867671",
+          "title": "Nina Simone La sélection",
+          "cover": "https://api.deezer.com/album/6867671/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/63893be2b232d83375916f1403a89dfe/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/63893be2b232d83375916f1403a89dfe/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/63893be2b232d83375916f1403a89dfe/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/6867671/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "2171224",
+        "readable": true,
+        "title": "At Last",
+        "title_short": "At Last",
+        "title_version": "(Single Version)",
+        "link": "http://www.deezer.com/track/2171224",
+        "duration": "180",
+        "rank": "956108",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-b.deezer.com/stream/bf3ff3cf5ac342b6365cccee16b5c1d3-6.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "620",
+          "name": "Etta James",
+          "link": "http://www.deezer.com/artist/620",
+          "tracklist": "https://api.deezer.com/artist/620/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "217268",
+          "title": "At Last!",
+          "cover": "https://api.deezer.com/album/217268/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/f502d8c8932f2c4799a9c8b5a270c10e/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/f502d8c8932f2c4799a9c8b5a270c10e/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/f502d8c8932f2c4799a9c8b5a270c10e/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/217268/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "3516156",
+        "readable": true,
+        "title": "Cry Me A River",
+        "title_short": "Cry Me A River",
+        "title_version": "(1991 - Remaster)",
+        "link": "http://www.deezer.com/track/3516156",
+        "duration": "176",
+        "rank": "907285",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-a.deezer.com/stream/a803c5844417c96002b7ae7ba0b82537-5.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "1449",
+          "name": "Julie London",
+          "link": "http://www.deezer.com/artist/1449",
+          "tracklist": "https://api.deezer.com/artist/1449/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "332793",
+          "title": "The Very Best Of Julie London",
+          "cover": "https://api.deezer.com/album/332793/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/c8cf44c8a3cb88b0be7abf4e0f9bf127/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/c8cf44c8a3cb88b0be7abf4e0f9bf127/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/c8cf44c8a3cb88b0be7abf4e0f9bf127/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/332793/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "7310682",
+        "readable": true,
+        "title": "Lullaby Of Birdland",
+        "title_short": "Lullaby Of Birdland",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/7310682",
+        "duration": "242",
+        "rank": "734730",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-1.deezer.com/stream/15f1c3a479dd572928549d5355ba28f3-5.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "2393",
+          "name": "Sarah Vaughan",
+          "link": "http://www.deezer.com/artist/2393",
+          "tracklist": "https://api.deezer.com/artist/2393/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "674619",
+          "title": "Lullaby Of Birdland",
+          "cover": "https://api.deezer.com/album/674619/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/f99a2be230aa44c229d9c9a8cc6f8fcb/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/f99a2be230aa44c229d9c9a8cc6f8fcb/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/f99a2be230aa44c229d9c9a8cc6f8fcb/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/674619/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "924493",
+        "readable": true,
+        "title": "(There Is) No Greater Love",
+        "title_short": "(There Is) No Greater Love",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/924493",
+        "duration": "129",
+        "rank": "730228",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-7.deezer.com/stream/760977b4f62f5898d3f1e2b9aabb4841-6.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "9052",
+          "name": "Amy Winehouse",
+          "link": "http://www.deezer.com/artist/9052",
+          "tracklist": "https://api.deezer.com/artist/9052/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "104114",
+          "title": "Frank",
+          "cover": "https://api.deezer.com/album/104114/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/484fadbd996f77abc45a0a6ddf6420e9/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/484fadbd996f77abc45a0a6ddf6420e9/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/484fadbd996f77abc45a0a6ddf6420e9/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/104114/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "3124340",
+        "readable": true,
+        "title": "Fever",
+        "title_short": "Fever",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/3124340",
+        "duration": "199",
+        "rank": "874404",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-e.deezer.com/stream/e5200a164df01728a2741c6ea90f05d9-4.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "1134",
+          "name": "Peggy Lee",
+          "link": "http://www.deezer.com/artist/1134",
+          "tracklist": "https://api.deezer.com/artist/1134/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "301394",
+          "title": "The Capitol Years",
+          "cover": "https://api.deezer.com/album/301394/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/0ce6e5bf897b634444c40ebba9e98c59/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/0ce6e5bf897b634444c40ebba9e98c59/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/0ce6e5bf897b634444c40ebba9e98c59/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/301394/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "17592153",
+        "readable": true,
+        "title": "Strange Fruit",
+        "title_short": "Strange Fruit",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/17592153",
+        "duration": "189",
+        "rank": "650762",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-8.deezer.com/stream/85bc29e2d189264d17e80bd04fe0e938-4.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "1036",
+          "name": "Billie Holiday",
+          "link": "http://www.deezer.com/artist/1036",
+          "tracklist": "https://api.deezer.com/artist/1036/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "1647757",
+          "title": "The Definitive Collection",
+          "cover": "https://api.deezer.com/album/1647757/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/0e8531f762c694e4c82435a6318b5bde/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/0e8531f762c694e4c82435a6318b5bde/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/0e8531f762c694e4c82435a6318b5bde/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/1647757/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "6490876",
+        "readable": true,
+        "title": "J'ai deux amours",
+        "title_short": "J'ai deux amours",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/6490876",
+        "duration": "169",
+        "rank": "637179",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-e.deezer.com/stream/e22a36f66aa8679791c9744e4f6a0b7d-2.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "54216",
+          "name": "Joséphine Baker",
+          "link": "http://www.deezer.com/artist/54216",
+          "tracklist": "https://api.deezer.com/artist/54216/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "598093",
+          "title": "C'est Vous",
+          "cover": "https://api.deezer.com/album/598093/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/79c9379cfe59e7a25039961c2e1d326b/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/79c9379cfe59e7a25039961c2e1d326b/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/79c9379cfe59e7a25039961c2e1d326b/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/598093/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+      "id": "105229218",
+      "readable": true,
+      "title": "All Night Long",
+      "title_short": "All Night Long",
+      "title_version": "",
+      "link": "https://www.deezer.com/track/105229218",
+      "duration": "178",
+      "rank": "125224",
+      "explicit_lyrics": false,
+      "preview": "http://e-cdn-preview-9.deezer.com/stream/9c2c60ec27d976f501efc0cb222e01a8-0.mp3",
+      "artist": {
+        "id": "2059",
+        "name": "Aretha Franklin",
+        "link": "https://www.deezer.com/artist/2059",
+        "picture": "https://api.deezer.com/artist/2059/image",
+        "picture_small": "https://cdns-images.dzcdn.net/images/artist/6ccd94f5343e2841cfbf59cdc407d258/56x56-000000-80-0-0.jpg",
+        "picture_medium": "https://cdns-images.dzcdn.net/images/artist/6ccd94f5343e2841cfbf59cdc407d258/250x250-000000-80-0-0.jpg",
+        "picture_big": "https://cdns-images.dzcdn.net/images/artist/6ccd94f5343e2841cfbf59cdc407d258/500x500-000000-80-0-0.jpg",
+        "tracklist": "https://api.deezer.com/artist/2059/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "10959916",
+        "title": "Just For A Thrill",
+        "cover": "https://api.deezer.com/album/10959916/image",
+        "cover_small": "https://cdns-images.dzcdn.net/images/cover/cd23730bd1c13edf9a839f3b3225b73d/56x56-000000-80-0-0.jpg",
+        "cover_medium": "https://cdns-images.dzcdn.net/images/cover/cd23730bd1c13edf9a839f3b3225b73d/250x250-000000-80-0-0.jpg",
+        "cover_big": "https://cdns-images.dzcdn.net/images/cover/cd23730bd1c13edf9a839f3b3225b73d/500x500-000000-80-0-0.jpg",
+        "tracklist": "https://api.deezer.com/album/10959916/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },
+      {
+        "id": "1183250",
+        "readable": true,
+        "title": "What A Diff'rence A Day Makes",
+        "title_short": "What A Diff'rence A Day Makes",
+        "title_version": "(Single Version/Original Title)",
+        "link": "http://www.deezer.com/track/1183250",
+        "duration": "148",
+        "rank": "789164",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-b.deezer.com/stream/b91d0829d2ab578409a6aad20e6ee1e5-5.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "6009",
+          "name": "Dinah Washington",
+          "link": "http://www.deezer.com/artist/6009",
+          "tracklist": "https://api.deezer.com/artist/6009/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "126429",
+          "title": "What A Diff'rence A Day Makes",
+          "cover": "https://api.deezer.com/album/126429/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/6f761c37dd48e354d8654fba1d85569a/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/6f761c37dd48e354d8654fba1d85569a/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/6f761c37dd48e354d8654fba1d85569a/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/126429/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "2179096",
+        "readable": true,
+        "title": "Sing, Sing, Sing",
+        "title_short": "Sing, Sing, Sing",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/2179096",
+        "duration": "210",
+        "rank": "683708",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-9.deezer.com/stream/9541359fcff8bf6e0ef8314f51492fa4-3.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "57576",
+          "name": "Anita O'day",
+          "link": "http://www.deezer.com/artist/57576",
+          "tracklist": "https://api.deezer.com/artist/57576/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "217932",
+          "title": "Anita O'Day: Finest Hour",
+          "cover": "https://api.deezer.com/album/217932/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/3f32b4af6192a1bbd8d9746a74008536/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/3f32b4af6192a1bbd8d9746a74008536/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/3f32b4af6192a1bbd8d9746a74008536/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/217932/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "17909380",
+        "readable": false,
+        "title": "I Can't Help It",
+        "title_short": "I Can't Help It",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/17909380",
+        "duration": "166",
+        "rank": "392159",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-1.deezer.com/stream/15d4add07cb48dd2debfb16cf0d92a88-2.mp3",
+        "alternative": {
+          "id": "2186178",
+          "readable": true,
+          "title": "I Can't Help It",
+          "title_short": "I Can't Help It",
+          "title_version": "",
+          "link": "http://www.deezer.com/track/2186178",
+          "duration": "166",
+          "rank": "641808",
+          "explicit_lyrics": false,
+          "preview": "http://cdn-preview-2.deezer.com/stream/2999209ef62846119b468cac4579e1f5-3.mp3",
+          "artist": {
+            "id": "77526",
+            "name": "Betty Carter",
+            "link": "http://www.deezer.com/artist/77526",
+            "tracklist": "https://api.deezer.com/artist/77526/top?limit=50",
+            "type": "artist"
+          },
+          "album": {
+            "id": "218470",
+            "title": "Betty Carter's Finest Hour",
+            "cover": "https://api.deezer.com/album/218470/image",
+            "cover_small": "https://cdns-images.deezer.com/images/cover/207487e460a91ac82db309bf5e88e868/56x56-000000-80-0-0.jpg",
+            "cover_medium": "https://cdns-images.deezer.com/images/cover/207487e460a91ac82db309bf5e88e868/250x250-000000-80-0-0.jpg",
+            "cover_big": "https://cdns-images.deezer.com/images/cover/207487e460a91ac82db309bf5e88e868/500x500-000000-80-0-0.jpg",
+            "tracklist": "https://api.deezer.com/album/218470/tracks",
+            "type": "album"
+          },
+          "type": "track"
+        },
+        "time_add": 1383128977,
+        "artist": {
+          "id": "77526",
+          "name": "Betty Carter",
+          "link": "http://www.deezer.com/artist/77526",
+          "tracklist": "https://api.deezer.com/artist/77526/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "1681653",
+          "title": "Betty Carter's Finest Hour",
+          "cover": "https://api.deezer.com/album/1681653/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/3c045419aa7e3a65f8c41ae9188d46a0/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/3c045419aa7e3a65f8c41ae9188d46a0/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/3c045419aa7e3a65f8c41ae9188d46a0/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/1681653/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "6822484",
+        "readable": false,
+        "title": "My Funny Valentine",
+        "title_short": "My Funny Valentine",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/6822484",
+        "duration": "261",
+        "rank": "667995",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-8.deezer.com/stream/8621c72ff27e1ace9e72606d5ea33347-3.mp3",
+        "alternative": {
+          "id": "2229792",
+          "readable": true,
+          "title": "My Funny Valentine",
+          "title_short": "My Funny Valentine",
+          "title_version": "",
+          "link": "http://www.deezer.com/track/2229792",
+          "duration": "261",
+          "rank": "543230",
+          "explicit_lyrics": false,
+          "preview": "http://cdn-preview-e.deezer.com/stream/eecfe4554f61b2ffc7ddb1647d31f13a-4.mp3",
+          "artist": {
+            "id": "54627",
+            "name": "Carmen Mcrae",
+            "link": "http://www.deezer.com/artist/54627",
+            "tracklist": "https://api.deezer.com/artist/54627/top?limit=50",
+            "type": "artist"
+          },
+          "album": {
+            "id": "223157",
+            "title": "Carmen McRae For Lovers",
+            "cover": "https://api.deezer.com/album/223157/image",
+            "cover_small": "https://cdns-images.deezer.com/images/cover/c44710830762e3b35eab6b21024a0c9f/56x56-000000-80-0-0.jpg",
+            "cover_medium": "https://cdns-images.deezer.com/images/cover/c44710830762e3b35eab6b21024a0c9f/250x250-000000-80-0-0.jpg",
+            "cover_big": "https://cdns-images.deezer.com/images/cover/c44710830762e3b35eab6b21024a0c9f/500x500-000000-80-0-0.jpg",
+            "tracklist": "https://api.deezer.com/album/223157/tracks",
+            "type": "album"
+          },
+          "type": "track"
+        },
+        "time_add": 1383128977,
+        "artist": {
+          "id": "54627",
+          "name": "Carmen Mcrae",
+          "link": "http://www.deezer.com/artist/54627",
+          "tracklist": "https://api.deezer.com/artist/54627/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "630001",
+          "title": "Standards (Great Songs/Great Performances)",
+          "cover": "https://api.deezer.com/album/630001/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/398de37d309f5e6979b0b9a9af583353/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/398de37d309f5e6979b0b9a9af583353/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/398de37d309f5e6979b0b9a9af583353/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/630001/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "2544845",
+        "readable": true,
+        "title": "Manhattan",
+        "title_short": "Manhattan",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/2544845",
+        "duration": "254",
+        "rank": "716790",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-4.deezer.com/stream/45b0c34d21d2998233348d5ce0a78265-3.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "7676",
+          "name": "Blossom Dearie",
+          "link": "http://www.deezer.com/artist/7676",
+          "tracklist": "https://api.deezer.com/artist/7676/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "249336",
+          "title": "Verve Jazz Masters 51: Blossom Dearie",
+          "cover": "https://api.deezer.com/album/249336/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/7d6244d286588c1f01422b0e03094d3f/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/7d6244d286588c1f01422b0e03094d3f/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/7d6244d286588c1f01422b0e03094d3f/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/249336/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "1168482",
+        "readable": true,
+        "title": "Live For Life",
+        "title_short": "Live For Life",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/1168482",
+        "duration": "289",
+        "rank": "597600",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-9.deezer.com/stream/9e0fb62d998e65e9df884238174c5d41-4.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "10293",
+          "name": "Abbey Lincoln",
+          "link": "http://www.deezer.com/artist/10293",
+          "tracklist": "https://api.deezer.com/artist/10293/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "125123",
+          "title": "The World Is Falling Down",
+          "cover": "https://api.deezer.com/album/125123/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/0e4aec38ab41b7868cd17ed683cdff88/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/0e4aec38ab41b7868cd17ed683cdff88/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/0e4aec38ab41b7868cd17ed683cdff88/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/125123/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "4585381",
+        "readable": true,
+        "title": "Hit The Road Jack",
+        "title_short": "Hit The Road Jack",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/4585381",
+        "duration": "191",
+        "rank": "813880",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-1.deezer.com/stream/1f3ad265ee72b5f472685f4fa486a671-3.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "8597",
+          "name": "Shirley Horn",
+          "link": "http://www.deezer.com/artist/8597",
+          "tracklist": "https://api.deezer.com/artist/8597/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "421991",
+          "title": "The Swingin' Shirley Horn (Jazz Club)",
+          "cover": "https://api.deezer.com/album/421991/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/5b45b741b25f0bab2824768f8d2f145d/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/5b45b741b25f0bab2824768f8d2f145d/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/5b45b741b25f0bab2824768f8d2f145d/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/421991/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "2193709",
+        "readable": true,
+        "title": "You'd Be So Nice To Come Home To",
+        "title_short": "You'd Be So Nice To Come Home To",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/2193709",
+        "duration": "274",
+        "rank": "596672",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-5.deezer.com/stream/5076f1cdc7150c7391db627dd8755945-5.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "71266",
+          "name": "Helen Merrill",
+          "link": "http://www.deezer.com/artist/71266",
+          "tracklist": "https://api.deezer.com/artist/71266/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "219361",
+          "title": "Brownie",
+          "cover": "https://api.deezer.com/album/219361/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/7087ca1b143d14c52996b826c55b08ba/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/7087ca1b143d14c52996b826c55b08ba/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/7087ca1b143d14c52996b826c55b08ba/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/219361/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "609320",
+        "readable": true,
+        "title": "You're Lucky To Me",
+        "title_short": "You're Lucky To Me (Album Version)",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/609320",
+        "duration": "189",
+        "rank": "594221",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-0.deezer.com/stream/01df33be5858aa8e8b886c241c5a3eda-3.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "55685",
+          "name": "Ethel Waters",
+          "link": "http://www.deezer.com/artist/55685",
+          "tracklist": "https://api.deezer.com/artist/55685/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "77205",
+          "title": "The Incomparable Ethel Waters",
+          "cover": "https://api.deezer.com/album/77205/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/1916b87b35fc5b2526de2e99adf945f5/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/1916b87b35fc5b2526de2e99adf945f5/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/1916b87b35fc5b2526de2e99adf945f5/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/77205/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+      "id": "40816301",
+      "readable": true,
+      "title": "Over the Rainbow",
+      "title_short": "Over the Rainbow",
+      "title_version": "",
+      "link": "https://www.deezer.com/track/40816301",
+      "duration": "169",
+      "rank": "445389",
+      "explicit_lyrics": false,
+      "preview": "http://e-cdn-preview-b.deezer.com/stream/b432a6045093b0536878ce100ff25f25-3.mp3",
+      "artist": {
+        "id": "2207",
+        "name": "Judy Garland",
+        "link": "https://www.deezer.com/artist/2207",
+        "picture": "https://api.deezer.com/artist/2207/image",
+        "picture_small": "https://cdns-images.dzcdn.net/images/artist/901e17cd415e06ebef82a9ae9e053df3/56x56-000000-80-0-0.jpg",
+        "picture_medium": "https://cdns-images.dzcdn.net/images/artist/901e17cd415e06ebef82a9ae9e053df3/250x250-000000-80-0-0.jpg",
+        "picture_big": "https://cdns-images.dzcdn.net/images/artist/901e17cd415e06ebef82a9ae9e053df3/500x500-000000-80-0-0.jpg",
+        "tracklist": "https://api.deezer.com/artist/2207/top?limit=50",
+        "type": "artist"
+      },
+      "album": {
+        "id": "3990381",
+        "title": "The Very Best of Jazz - 50 Unforgettable Tracks",
+        "cover": "https://api.deezer.com/album/3990381/image",
+        "cover_small": "https://cdns-images.dzcdn.net/images/cover/9355eaa555e0c331ac17f84a84af6615/56x56-000000-80-0-0.jpg",
+        "cover_medium": "https://cdns-images.dzcdn.net/images/cover/9355eaa555e0c331ac17f84a84af6615/250x250-000000-80-0-0.jpg",
+        "cover_big": "https://cdns-images.dzcdn.net/images/cover/9355eaa555e0c331ac17f84a84af6615/500x500-000000-80-0-0.jpg",
+        "tracklist": "https://api.deezer.com/album/3990381/tracks",
+        "type": "album"
+      },
+      "type": "track"
+    },
+      {
+        "id": "633724",
+        "readable": true,
+        "title": "Stormy Weather (Remastered 2002)",
+        "title_short": "Stormy Weather",
+        "title_version": "(Remastered 2002)",
+        "link": "http://www.deezer.com/track/633724",
+        "duration": "205",
+        "rank": "609418",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-f.deezer.com/stream/f87e59b5c441b77bbd8bd61576651ec9-3.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "61662",
+          "name": "Lena Horne",
+          "link": "http://www.deezer.com/artist/61662",
+          "tracklist": "https://api.deezer.com/artist/61662/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "78875",
+          "title": "The Young Star",
+          "cover": "https://api.deezer.com/album/78875/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/e2de0cb79c644c29afa080d285824484/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/e2de0cb79c644c29afa080d285824484/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/e2de0cb79c644c29afa080d285824484/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/78875/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      },
+      {
+        "id": "3093478",
+        "readable": true,
+        "title": "Something",
+        "title_short": "Something",
+        "title_version": "",
+        "link": "http://www.deezer.com/track/3093478",
+        "duration": "212",
+        "rank": "615004",
+        "explicit_lyrics": false,
+        "preview": "http://cdn-preview-3.deezer.com/stream/34c80692c0c8acabb2078a50bd6bfdeb-1.mp3",
+        "time_add": 1383128977,
+        "artist": {
+          "id": "3600",
+          "name": "Shirley Bassey",
+          "link": "http://www.deezer.com/artist/3600",
+          "tracklist": "https://api.deezer.com/artist/3600/top?limit=50",
+          "type": "artist"
+        },
+        "album": {
+          "id": "299474",
+          "title": "The Finest Shirley Bassey Collection",
+          "cover": "https://api.deezer.com/album/299474/image",
+          "cover_small": "https://cdns-images.deezer.com/images/cover/d7f887a77a55d5b28e284e3ff40988c1/56x56-000000-80-0-0.jpg",
+          "cover_medium": "https://cdns-images.deezer.com/images/cover/d7f887a77a55d5b28e284e3ff40988c1/250x250-000000-80-0-0.jpg",
+          "cover_big": "https://cdns-images.deezer.com/images/cover/d7f887a77a55d5b28e284e3ff40988c1/500x500-000000-80-0-0.jpg",
+          "tracklist": "https://api.deezer.com/album/299474/tracks",
+          "type": "album"
+        },
+        "type": "track"
+      }
+    ]
+  }
+}
